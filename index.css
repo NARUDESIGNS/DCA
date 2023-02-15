@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* set other color variables needed */
+    --primary-text-color: #000;
+    --secondary-text-color: #eee;
+}

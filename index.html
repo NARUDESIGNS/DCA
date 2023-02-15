@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./assets/icons/Logo.png" type="image/x-icon">
+    <title>DCA</title>
+</head>
+<body>
+    <div class="overall-container" id="overall-container">
+        <nav class="nav" id="nav">
+            <p class="nav__logo">
+                <img class="nav__logo-img" src="./assets/icons/Logo.png" alt="logo"></img>
+                <p class="nav__logo-text">Divine Christian Assembly</p>
+            </p>
+
+            <ul class="nav-items" id="nav-items">
+                <li class="nav-items__item nav-items__item-active">Home</li>
+                <li class="nav-items__item">Resources</li>
+                <li class="nav-items__item">Events</li>
+                <li class="nav-items__item">Give</li>
+                <li class="nav-items__item">Contacts</li>
+                <li class="nav-items__item">About</li>
+            </ul>
+
+            <!-- add menu icon here later for mobile -->
+        </nav>
+
+        <div class="carousel" id="carousel">
+           <section class="carousel-slide">
+                <p class="carousel-slide__text">It's A Meaningful Life</p>
+                <img src="./assets/images/carousel-slide-1.jpeg" alt="carousel slide">
+           </section> 
+           <section class="carousel-slide">
+                <p class="carousel-slide__text">Songs Of Praise</p>
+                <img src="./assets/images/carousel-slide-2.jpeg" alt="carousel slide">
+           </section> 
+           <section class="carousel-slide">
+                <p class="carousel-slide__text">The Word</p>
+                <img src="./assets/images/carousel-slide-3.jpeg" alt="carousel slide">
+           </section> 
+
+           <section class="slide-indicators">
+                <span class="slide-indicators__indicator"></span>
+                <span class="slide-indicators__indicator"></span>
+                <span class="slide-indicators__indicator"></span>
+           </section>
+        </div>
+
+        <div class="upcoming-event">
+            <h1 class="upcoming-event__title header-title" id="upcoming-event-title">Annual Convention</h1>
+
+            <section class="countdown">
+                <section class="countdown-days">
+                    <p class="countdown-value" id="countdown-days">00</p>
+                    <p class="countdown-days__days">DAYS</p>
+                </section>
+                <section class="countdown-hours" id="countdown-hours">
+                    <p class="countdown-value">00</p>
+                    <p class="countdown-days__hours">HOURS</p>
+                </section>
+                <section class="countdown-minutes">
+                    <p class="countdown-value">00</p>
+                    <p class="countdown-days__minutes">MINUTES</p>
+                </section>
+                <section class="countdown-seconds">
+                    <p class="countdown-value">00</p>
+                    <p class="countdown-days__seconds">SECONDS</p>
+                </section>
+            </section>
+
+            <button class="see-all-events btn">See All Events</button>
+        </div>
+        
+        <div class="founders">
+            <!-- <img src="./assets/images/founders.jpeg" alt="photo of founders"> -->
+            <!-- use css background image instead -->
+            <div class="founders"></div>
+            <section class="founders-details">
+                <h1 class="founders-details__title header-title">Meet Our Founders</h1>
+                <p class="founders-details__name">Rev. Dr. Emmanuel Olubayo Folarin</p>
+                <p class="founders-details__name">Rev. Dr. Mrs. Felicia Eyitope Folarin</p>
+            </section>
+            <button class="see-all-founders__btn btn">See All Founders</button>
+        </div>
+
+        <div class="mission">
+            <section class="vision">
+                <h1 class="vision__title header-title">Our Vision</h1>
+                <p class="vision__message">A place where a person with no church background can come and feel comfortable and enjoy God’s presence.</p>
+            </secti>
+            <section class="mission">
+                <h1 class="mission__title header-title">Our Vision</h1>
+                <p class="mission__message">Preparing the bride of Christ in a holy and acceptable manner as pre-purposed by God, reaching the unreached through mission.​</p>
+            </secti>
+            <section class="values">
+                <h1 class="values__title header-title">Our Vision</h1>
+                <p class="values__message">We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday life.</p>
+            </secti>
+        </div>
+
+        <div class="pastorate">
+            <section class="pastor">
+
+            </section>
+        </div>
+    </div>
+    
+    <script src="index.js" type="module"></script>
+</body>
+</html>
