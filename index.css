@@ -12,6 +12,7 @@
     --secondary-text-color: #0458A0;
     --fill-color: #0458A0;
     --light-blue-bg: #E6EEF5;
+    --light-grey-bg: #f1f1f1;
     --light-background: #ffffff;
     --btn-border: #0457a04a;
 
@@ -24,7 +25,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-text-color);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Generally used styles ------------------------- */
@@ -249,8 +250,6 @@ margin-bottom: var(--spacing-lg)
 .mission__message,
 .values__message {
     line-height: 2;
-    font-weight: 500;
-    font-size: 0.9rem;
 }
 
 .pastorate {
@@ -298,15 +297,78 @@ margin-bottom: var(--spacing-lg)
     line-height: 1.7;
 }
 
+.testimonies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+.testiomies-container__title {
+    margin-bottom: var(--spacing-md);
+}
+.testimony-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 var(--spacing-lg);
+}
+.testimony {
+    padding: 30px;
+    background-color: var(--light-grey-bg);
+    border-radius: 8px;
+    width: 300px;
+    font-size: 0.9rem;
+}
+.testimony__name {
+    text-align: right;
+    font-style: italic;
+}
 
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+.activities-container__header {
+    margin-bottom: var(--spacing-md);
+}
+.activities {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.activity {
+    line-height: 2;
+    margin-bottom: var(--spacing-sm);
+}
+.activity__title {
+    margin-bottom: 20px;
+}
+.activity-group {
+    margin-bottom: 20px;
+}
+.activities-container__address {
+    margin-bottom: var(--spacing-lg);
+}
 
-
-
-
-
-
-
-
+.word-for-the-year {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-lg);
+    line-height: 0.9;
+    color: #323232;
+}
+.word-for-the-year__sub-word {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.word-for-the-year__word {
+    font-size: 7rem;
+    font-weight: 800;
+}
 
 .footer {
     background-color: var(--light-blue-bg);
@@ -318,7 +380,7 @@ margin-bottom: var(--spacing-lg)
     justify-content: space-between;
 }
 .church-details {
-    width: 30%;
+    width: 40%;
 }
 .church-logo {
     display: flex;
