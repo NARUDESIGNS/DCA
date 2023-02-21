@@ -12,10 +12,10 @@
     <div class="overall-container" id="overall-container">
         <!-- navigation -->
         <nav class="nav" id="nav">
-            <p class="nav__logo">
+            <section class="nav__logo">
                 <img class="nav__logo-img" src="./assets/icons/Logo.png" alt="logo"></img>
                 <p class="nav__logo-text">Divine Christian Assembly</p>
-            </p>
+            </section>
 
             <ul class="nav-items" id="nav-items">
                 <li class="nav-items__item nav-items__item-active">Home</li>
@@ -32,20 +32,22 @@
         <!-- Carousel -->
         <div class="carousel" id="carousel">
            <section class="carousel-slide">
-                <p class="carousel-slide__text">It's A Meaningful Life</p>
-                <img src="./assets/images/carousel-slide-1.jpeg" alt="carousel slide">
+                <h1 class="carousel-slide__text">It's A Meaningful Life</h1>
+                <!-- <img src="./assets/images/carousel-slide-1.jpeg" alt="carousel slide"> -->
            </section> 
-           <section class="carousel-slide">
+           <!-- <section class="carousel-slide">
                 <p class="carousel-slide__text">Songs Of Praise</p>
                 <img src="./assets/images/carousel-slide-2.jpeg" alt="carousel slide">
            </section> 
            <section class="carousel-slide">
                 <p class="carousel-slide__text">The Word</p>
                 <img src="./assets/images/carousel-slide-3.jpeg" alt="carousel slide">
-           </section> 
+           </section>  -->
 
            <section class="slide-indicators">
-                <span class="slide-indicators__indicator"></span>
+               <span class="slide-indicators__indicator"></span>
+               <span class="slide-indicators__indicator"></span>
+                <span class="slide-indicators__indicator indicator-active"></span>
                 <span class="slide-indicators__indicator"></span>
                 <span class="slide-indicators__indicator"></span>
            </section>
@@ -58,19 +60,19 @@
             <section class="countdown">
                 <section class="countdown-days">
                     <p class="countdown-value" id="countdown-days">00</p>
-                    <p class="countdown-days__days">DAYS</p>
+                    <p class="countdown-text">DAYS</p>
                 </section>
                 <section class="countdown-hours" id="countdown-hours">
                     <p class="countdown-value">00</p>
-                    <p class="countdown-days__hours">HOURS</p>
+                    <p class="countdown-text">HOURS</p>
                 </section>
                 <section class="countdown-minutes">
                     <p class="countdown-value">00</p>
-                    <p class="countdown-days__minutes">MINUTES</p>
+                    <p class="countdown-text">MINUTES</p>
                 </section>
                 <section class="countdown-seconds">
                     <p class="countdown-value">00</p>
-                    <p class="countdown-days__seconds">SECONDS</p>
+                    <p class="countdown-text">SECONDS</p>
                 </section>
             </section>
 
@@ -80,55 +82,60 @@
         <!-- Founders -->
         <div class="founders">
             <!-- TODO: contemplate which is better, <img> or css image background -->
-            <!-- <img src="./assets/images/founders.jpeg" alt="photo of founders"> -->
-            <div class="founders"></div>
-            <section class="founders-details">
-                <h1 class="founders-details__title header-title">Meet Our Founders</h1>
-                <p class="founders-details__name">Rev. Dr. Emmanuel Olubayo Folarin</p>
-                <p class="founders-details__name">Rev. Dr. Mrs. Felicia Eyitope Folarin</p>
-            </section>
-            <button class="founders__btn btn">See All Founders</button>
+            <!-- <img src="./assets/images/founders.jpeg" alt="photo of founders" class="founders-img"> -->
+            <div class="founders-img"></div>
+            <div class="founders-details-wrapper">
+                <section class="founders-details">
+                    <h1 class="founders-details__title header-title">Meet Our Founders</h1>
+                    <p class="founders-details__name">Rev. Dr. Emmanuel Olubayo Folarin</p>
+                    <p class="founders-details__name">Rev. Dr. Mrs. Felicia Eyitope Folarin</p>
+                </section>
+                <button class="founders__btn btn">See All Founders</button>
+            </div>
         </div>
 
         <!-- Mission, Vision and Values -->
-        <div class="mission">
+        <div class="mission-vision-values">
             <section class="vision">
-                <h1 class="vision__title header-title">Our Vision</h1>
+                <h1 class="vision__title">Our Vision</h1>
                 <p class="vision__message">A place where a person with no church background can come and feel comfortable and enjoy God’s presence.</p>
-            </secti>
+            </section>
             <section class="mission">
-                <h1 class="mission__title header-title">Our Vision</h1>
+                <h1 class="mission__title">Our Mission</h1>
                 <p class="mission__message">Preparing the bride of Christ in a holy and acceptable manner as pre-purposed by God, reaching the unreached through mission.​</p>
-            </secti>
+            </section>
             <section class="values">
-                <h1 class="values__title header-title">Our Vision</h1>
+                <h1 class="values__title">Our Values</h1>
                 <p class="values__message">We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday life.</p>
-            </secti>
+            </section>
         </div>
 
         <!-- Pastorate -->
         <div class="pastorate">
-            <h1 class="pastorate__title header=title">Pastorate</h1>
+            <h1 class="pastorate__title header-title">Pastorate</h1>
             <div class="pastors-container">                
                 <section class="pastors">
                     <!-- TODO: contemplate which is better, <img> or css image background -->
-                    <img src="./assets/images/pastorate1.jpeg" alt="pastor's image" class="pastors__img">
+                    <div class="pastors__img-1"></div>
+                    <!-- <img src="./assets/images/pastorate1.jpeg" alt="pastor's image" class="pastors__img"> -->
                     <div class="pastors-credentials">
-                        <h3>Resident Pastor</h3>
+                        <h4>Resident Pastor</h4>
                         <p>Olubayo Folarin</p>
                     </div>
                 </section>
                 <section class="pastors">
-                    <img src="./assets/images/pastorate2.jpeg" alt="pastor's image" class="pastors__img">
+                    <div class="pastors__img-2"></div>
+                    <!-- <img src="./assets/images/pastorate2.jpeg" alt="pastor's image" class="pastors__img"> -->
                     <div class="pastors-credentials">
-                        <h3>Branch Pastor</h3>
+                        <h4>Branch Pastor</h4>
                         <p>Deac Ekule P.O Barry</p>
                     </div>
                 </section>
                 <section class="pastors">
-                    <img src="./assets/images/pastorate3.jpeg" alt="pastor's image" class="pastors__img">
+                    <div class="pastors__img-3"></div>
+                    <!-- <img src="./assets/images/pastorate3.jpeg" alt="pastor's image" class="pastors__img"> -->
                     <div class="pastors-credentials">
-                        <h3>church Admin (Operations)</h3>
+                        <h4>church Admin (Operations)</h4>
                         <p>Uyakemegbia Funfade Temitope</p>
                     </div>
                 </section>
@@ -181,7 +188,7 @@
         <h1 class="activities-container__header header-title">Activities</h1>
         <div class="activities">
             <section class="activity">
-                <h3 class="activity__title header-title">Sunday</h3>
+                <h4 class="activity__title">Sunday</h4>
                 <div class="activity-group">
                     <p class="activity-group__name">Learning At His Feet</p>
                     <p class="activity-group__time">8:30am - 9:15am</p>
@@ -192,7 +199,7 @@
                 </div>
             </section>
             <section class="activity">
-                <h3 class="activity__title header-title">Wednesdays</h3>
+                <h4 class="activity__title">Wednesdays</h4>
                 <div class="activity-group">
                     <p class="activity-group__name">Mid-Week Worship</p>
                     <p class="activity-group__time">6:00pm - 7:00pm</p>
@@ -203,14 +210,14 @@
                 </div>
             </section>
             <section class="activity">
-                <h3 class="activity__title header-title">Thursdays</h3>
+                <h4 class="activity__title">Thursdays</h4>
                 <div class="activity-group">
                     <p class="activity-group__name">Healing Clinic</p>
                     <p class="activity-group__time">10:00am - 12:00pm</p>
                 </div>
             </section>
             <section class="activity">
-                <h3 class="activity__title header-title">3rd Fridays</h3>
+                <h4 class="activity__title">3rd Fridays</h4>
                 <div class="activity-group">
                     <p class="activity-group__name">Divine Night</p>
                     <p class="activity-group__time">11:00pm - 4:00am</p>
@@ -234,44 +241,51 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div class="church-details">
-            <section class="church-logo">
-                <img src="./assets/icons/Logo.png" alt="church logo" class="church-logo__logo">
-                <p class="church-logo__name">DIVINE CHRISTIAN ASSEMBLYS</p>
-            </section>
-            <h3 class="church-details__title">CONTACT</h3>
-            <section class="details">
-                <p class="details__desc">dcahqt@yahoo.com</p>
-                <p class="details__desc">+234-907-999-8247</p>
-                <p class="details__desc">+234-706-448-6152</p>
-                <p class="details__desc">33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State</p>
-            </section>
+        <div class="footer-items">
+            <div class="church-details">
+                <section class="church-logo">
+                    <img src="./assets/icons/Logo.png" alt="church logo" class="church-logo__logo">
+                    <h1 class="church-logo__name">DIVINE CHRISTIAN ASSEMBLYS</h1>
+                </section>
+                <h4 class="church-details__title">CONTACT</h4>
+                <section class="contact-details-container">
+                    <ul class="contact-details">
+                        <li class="contact-details__desc">dcahqt@yahoo.com</li>
+                        <li class="contact-details__desc">+234-907-999-8247</li>
+                        <li class="contact-details__desc">+234-706-448-6152</li>
+                    </ul>
+                    <p class="contact-details__desc contact-details__desc-address">33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State</p>
+                </section>
+            </div>
+    
+            <div class="church-main-details">
+                <ul class="about">
+                    <h4 class="church-main-details__title">ABOUT</h4>
+                    <li class="about__title"><a href="#">Departments</a></li>
+                    <li class="about__title"><a href="#">The Church</a></li>
+                    <li class="about__title"><a href="#">Our Pastorate</a></li>
+                    <li class="about__title"><a href="#">Our Locations</a></li>
+                </ul>
+                <ul class="follow-us">
+                    <h4 class="church-main-details__title">FLLOW US</h4>
+                    <li class="follow-us__title"><a href="#">Twitter</a></li>
+                    <li class="follow-us__title"><a href="#">YouTube</a></li>
+                    <li class="follow-us__title"><a href="#">Facebook</a></li>
+                    <li class="follow-us__title"><a href="#">Instagram</a></li>
+                </ul>
+                <ul class="events">
+                    <h4 class="church-main-details__title">EVENTS</h4>
+                    <li class="events__title"><a href="#">Children's Day</a></li>
+                    <li class="events__title"><a href="#">Youth Weekend</a></li>
+                    <li class="events__title"><a href="#">Tehilah</a></li>
+                    <li class="events__title"><a href="#">Night Of 12 Convention</a></li>
+                    <li class="events__title"><a href="#">Kingdom Life Convention</a></li>
+                    <li class="events__title"><a href="#">Living in Love and Harmony</a></li>
+                </ul>
+            </div>
+    
         </div>
-
-        <div class="church-main-details">
-            <section class="about">
-                <a href="#" class="about__title">The Church</a>
-                <a href="#" class="about__title">Departments</a>
-                <a href="#" class="about__title">Our Pastorate</a>
-                <a href="#" class="about__title">Our Locations</a>
-            </section>
-            <section class="follow-us">
-                <a href="#" class="follow-us__title">Twitter</a>
-                <a href="#" class="follow-us__title">YouTube</a>
-                <a href="#" class="follow-us__title">Facebook</a>
-                <a href="#" class="follow-us__title">Instagram</a>
-            </section>
-            <section class="events">
-                <a href="#" class="events__title">Tehilah</a>
-                <a href="#" class="events__title">Children's Day</a>
-                <a href="#" class="events__title">Youth Weekend</a>
-                <a href="#" class="events__title">Night Of 12 Convention</a>
-                <a href="#" class="events__title">Kingdom Life Convention</a>
-                <a href="#" class="events__title">Living in Love and Harmony</a>
-            </section>
-        </div>
-
-        <p>Divine Christian Assembly &copy <span id="footer-date">2023</span></p>
+        <p class="footer-date">Divine Christian Assembly &copy <span id="footer-date">2023</span></p>
     </div>
     
     <script src="index.js" type="module"></script>
