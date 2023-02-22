@@ -29,6 +29,18 @@ body {
 }
 
 /* Generally used styles ------------------------- */
+.dim-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    background-color: rgba(25, 13, 49, 0.8);
+    backdrop-filter: blur(1.5px);
+}
+
 .btn {
     background: transparent;
     color: var(--fill-color);
@@ -70,6 +82,7 @@ body {
 
 .overall-container {
     max-width: 1500px;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -82,7 +95,7 @@ body {
     background-color: var(--light-background);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 5;
     box-shadow: 0 3px 10px rgba(26, 26, 26, 0.1);
 }
 .nav__logo {
@@ -112,6 +125,11 @@ body {
 .nav-items__item:hover, 
 .nav-items__item-active {
     color: var(--fill-color);
+}
+
+.nav__menu,
+.nav-items__close {
+    display: none;
 }
 
 .carousel {
@@ -218,6 +236,7 @@ body {
     background-image: url('./assets/images/founders.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 8px;
 }
 .founders-details {
@@ -265,7 +284,10 @@ margin-bottom: var(--spacing-lg)
 .pastors-container {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+    margin: 0 var(--spacing-md);
 }
 .pastors__img-1,
 .pastors__img-2,
@@ -330,13 +352,15 @@ margin-bottom: var(--spacing-lg)
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
 }
 .activities-container__header {
     margin-bottom: var(--spacing-md);
 }
 .activities {
-    width: 60%;
+    width: 100%;
+    max-width: 900px;
     display: flex;
     justify-content: space-between;
 }
@@ -364,10 +388,12 @@ margin-bottom: var(--spacing-lg)
 .word-for-the-year__sub-word {
     font-size: 2rem;
     font-weight: 800;
+    letter-spacing: -1px;
 }
 .word-for-the-year__word {
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: 800;
+    letter-spacing: -5px;
 }
 
 .footer {
@@ -455,4 +481,73 @@ margin-bottom: var(--spacing-lg)
     text-align: center;
     font-weight: 500;
     margin-top: var(--spacing-lg);
+}
+
+
+/* Tablet | Mobile View */
+@media only screen and (max-width: 1000px) {
+    .contact-details-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+    .church-details {
+        width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    .church-main-details {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contact-details-container {
+        flex-wrap: nowrap;
+    }
+
+    .footer-items {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        background-color: var(--fill-color);
+        color: white;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        padding: var(--spacing-lg) var(--spacing-sm);
+        display: none;
+    }
+
+    .nav__menu,
+    .nav-items__close {
+        display: inherit;
+    }
+
+    .nav-items__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-items__item:hover, 
+    .nav-items__item-active {
+        color: currentColor;
+    }
+
+    .founders {
+        gap: 35px;
+    }
+
+    .word-for-the-year__word {
+        font-size: 5rem;
+    }
 }
