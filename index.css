@@ -36,7 +36,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 11;
+    z-index: 5;
     background-color: rgba(25, 13, 49, 0.8);
     backdrop-filter: blur(1.5px);
 }
@@ -95,7 +95,7 @@ body {
     background-color: var(--light-background);
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 1;
     box-shadow: 0 3px 10px rgba(26, 26, 26, 0.1);
 }
 .nav__logo {
@@ -523,8 +523,27 @@ margin-bottom: var(--spacing-lg)
         left: 0;
         bottom: 0;
         width: 300px;
-        padding: var(--spacing-lg) var(--spacing-sm);
-        display: none;
+        padding: var(--spacing-lg) var(--spacing-md);
+        /* display: none; */
+    }
+    .slide-in {
+        animation: slide-in 0.3s ease forwards;
+    }
+    @keyframes slide-in {
+        from { transform: translateX(-100%)}
+        to { transform: translateX(0)}
+    }
+    .slide-out {
+        animation: slide-out 0.3s ease forwards;
+    }
+    @keyframes slide-out {
+        from { transform: translateX(0)}
+        to { transform: translateX(-100%)}
+    }
+
+
+    .nav-items__items:active {
+        color: currentColor;
     }
 
     .nav__menu,
