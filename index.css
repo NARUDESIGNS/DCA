@@ -22,6 +22,10 @@
     --spacing-sm: 30px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-text-color);
@@ -63,7 +67,6 @@ a {
     color: var(--primary-text-color);
 }
 .dropdown__items {
-    /* margin-bottom: 15px; */
     padding: 15px;
     border-radius: inherit;
 }
@@ -162,7 +165,7 @@ a {
     font-weight: 500;
 }
 .nav-items__item:hover, 
-.nav-items__item-active {
+.nav-items__item--active {
     color: var(--fill-color);
 }
 .nav__menu,
@@ -365,6 +368,11 @@ margin-bottom: var(--spacing-lg)
     width: 300px;
     min-height: 150px;
     line-height: 1.7;
+}
+.pastors-credentials__details {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .testimonies {
@@ -569,7 +577,7 @@ margin-bottom: var(--spacing-lg)
     .nav-items {
         flex-direction: column;
         align-items: flex-start;
-        gap: 50px;
+        gap: 30px;
         background-color: var(--fill-color);
         color: white;
         position: fixed;
@@ -613,15 +621,20 @@ margin-bottom: var(--spacing-lg)
         right: 20px;
     }
 
-    .nav-items__item:hover, 
-    .nav-items__item-active {
+    .nav-items__item {
+        width: 100%;
+    }
+    .nav-items__item:hover {
         color: currentColor;
     }
-    .nav-items__item-active {
+    .nav-items__item--active {
         background: white;
         width: 100%;
         border-radius: 8px;
-        padding: 15px;
+        padding: 10px;
+        color: var(--secondary-text-color);
+    }
+    .nav-items__item--active:hover {
         color: var(--secondary-text-color);
     }
     
@@ -632,9 +645,14 @@ margin-bottom: var(--spacing-lg)
         font-size: 0.75rem;
         padding: 0;
         width: 150px;
-    }
-    .about .dropdown:hover {
         color: white;
+    }
+    .dropdown__items:hover {
+        color: white;
+        background: none;
+    }
+    .dropdown__items--active {
+        background: none;
     }
 
     .founders {
