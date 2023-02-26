@@ -1,0 +1,43 @@
+.banner {
+    background: url('../assets/images/events.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-color: var(--fill-color);
+    height: 500px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+.banner__text {
+    font-size: 3rem;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr) );
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 var(--spacing-lg);
+}
+.events-details {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--light-grey-bg);
+    line-height: 2;
+}
+.events-details__title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .banner {
+        height: 350px;
+    }
+}

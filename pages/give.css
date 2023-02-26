@@ -1,0 +1,147 @@
+/* modifier style */
+.darken-text {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+.banner {
+    background: url('../assets/images/give.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-color: var(--fill-color);
+    height: 500px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+.banner__text {
+    font-size: 3rem;
+}
+
+.bank-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+}
+.bank-info__title {
+    margin-bottom: var(--spacing-md);
+}
+
+.bank-accounts-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 var(--spacing-md);
+}
+
+.bank-details {
+    background-color: var(--light-blue-bg);
+    padding: 30px;
+    border-radius: 8px;
+}
+.bank-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.bank-header__logo {
+    width: 45px;
+    height: 45px;
+}
+.bank-details__account-name {
+    margin-bottom: 15px;
+}
+
+.bank-details__account-name,
+.bank-details__account-number {
+    font-weight: 500;
+}
+
+.give-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.give__title {
+    margin-bottom: 50px;
+}
+.give-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr) ) ;
+    gap: 30px;
+    width: 100%;
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+.give-details__input {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--light-grey-bg);
+    color: var(--primary-text-color);
+    font-size: 1rem;
+}
+.select-dropdown {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1368px) {
+    .bank-details__account-name,
+    .bank-details__account-number {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .give-details {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media only screen and (max-width: 709px) {
+    .bank-accounts-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    .bank-accounts-container {
+        padding: 0 var(--spacing-lg);
+    }
+    .bank-details {
+        width: 100%;
+    }
+    .bank-details__account-name,
+    .bank-details__account-number {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .banner {
+        height: 350px;
+    }
+
+    .bank-details__account-name,
+    .bank-details__account-number {
+        display: flex;
+        flex-direction: column;
+    }
+}
