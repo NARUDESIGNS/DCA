@@ -14,10 +14,12 @@
     <div class="nav-container">
         <!-- navigation -->
         <nav class="nav">
-            <section class="nav__logo">
-                <img class="nav__logo-img" src="../assets/icons/Logo.png" alt="logo"></img>
-                <p class="nav__logo-text">Divine Christian Assembly</p>
-            </section>
+            <a href="../index.html">
+                <section class="nav__logo">
+                    <img class="nav__logo-img" src="../assets/icons/Logo.png" alt="logo"></img>
+                    <p class="nav__logo-text">Divine Christian Assembly</p>
+                </section>
+            </a>
     
             <ul class="nav-items slide-out" id="side-menu">
                 <li class="nav-items__item"><a href="../index.html">Home</a></li>
@@ -28,10 +30,10 @@
                 <li class="nav-items__item about">
                     About
                     <ul class="dropdown">
-                        <!-- use  class to indicate active about page" -->
-                        <li class="dropdown__items">The Church</li>
-                        <li class="dropdown__items"><a href="./about/pastorate.html">Our Pastorate</a></li>
-                        <li class="dropdown__items">Departments</li>
+                        <!-- use dropdown__items--active class to indicate active about page" -->
+                        <a href="./about/church.html"><li class="dropdown__items">The Church</li></a>
+                        <a href="./about/pastorate.html"><li class="dropdown__items">Our Pastorate</li></a>
+                        <a href="./about/departments.html"><li class="dropdown__items">Departments</li></a>
                     </ul>
                 </li>
             </ul>
@@ -52,22 +54,22 @@
         
         <div class="events-container">
             <div class="events-details">
-                <h3 class="events-details__title">Kingdom Life Convention (KLC)</h3>
+                <h3 class="events-details__title" id="klc">Kingdom Life Convention (KLC)</h3>
                 <p class="events-details__desc">This is our ministry’s annual convention where all the branches of the ministry gather to worship, pray and listen to the word of God. It is usually a season of intense prays, miracles, signs and wonders. This intense spiritual exercise holds every year during the Easter holidays from Thursday to Sunday. Many testimonies of the workings of God has come out of these glorious meetings.</p>
             </div>
-            <div class="events-details">
-                <h3 class="events-details__title">Tehillah</h3>
+            <div class="events-details" id="tehilah">
+                <h3 class="events-details__title">Tehilah</h3>
                 <p class="events-details__desc">This is our mid-year praise event that brings worshippers of God from all around our community to bow before the Lordship of Jesus. It is conspicuously located in the month of June which is our month of prayer. This helps us activate the principle of praise in the midst of prayers. This worship and praise event holds every second Saturday in June. We have had very top Gospel minstrels since the event was conceived and many lives have been reached with the power of God for salvation.</p>
             </div>
-            <div class="events-details">
+            <div class="events-details" id="childrens-day">
                 <h3 class="events-details__title">Children’s Day</h3>
                 <p class="events-details__desc">Children’s day is a day where we celebrate the goodness and faithfulness of God over the life of our children in the ministry. We listen to the sing, act and minister to us in the word of God. It is an opportunity for them to display all the virtues they have acquired over the past one year. This glorious event often holds on the second Sunday in July of every year.</p>
             </div>
-            <div class="events-details">
+            <div class="events-details" id="living-in-love">
                 <h3 class="events-details__title">Living In Love and Harmony</h3>
                 <p class="events-details__desc">This is our yearly family programme where we touch on all forms of contemporary family issues. It is a programme designed to help families achieve their family destiny. It is a ‘REAL’ session that allows members ask mind bothering questions. Every family is encouraged to take advantage of this expository event to build family strength in unity, prayers, finance and in God. This event comes up every last Saturday in October every year. Make time out to join us.</p>
             </div>
-            <div class="events-details">
+            <div class="events-details" id="youth-weekend">
                 <h3 class="events-details__title">Youth Weekend</h3>
                 <p class="events-details__desc">The strength of anyone is in His or her youthful days. We are a ministry that believes strongly in the future of the young generation. To this end every second weekend in August the “Dynamic Youth Fellowship” have the opportunity to minister to the people of God in prayers, music, worship, drama and the WORD. This is a time to get refreshed as a young person burning with passion for Jesus.</p>
             </div>
@@ -80,7 +82,7 @@
                 <p class="events-details__desc">We are also focused on the age group that is usually overlooked-The Teenagers! We are concerned with this transition stage from childhood to early adulthood. We design programmes that helps teenagers discover who they are and who God has designed them to be. Our Major event; the Teen conference holds annually, first week in August. We also hold quarterly meetings that charge them up to dominate in all of life’s endeavors.</p>
             </div>
             <div class="events-details">
-                <h3 class="events-details__title">Night Of 12 Lessons</h3>
+                <h3 class="events-details__title" id="12lessons">Night Of 12 Lessons</h3>
                 <p class="events-details__desc">This is our annual carol service that holds every third Friday in December. It is a night where we listen to twelve lessons relating to the birth of Jesus Christ and learn from there. It is a night of combine drama, music, worship and the word of GOD. Its usually a service that is so colourful with virtually everyone dressed in Christmas colours. It is one worship experience that you do not want to miss out on.</p>
             </div>
         </div>
@@ -109,10 +111,10 @@
             <div class="church-main-details">
                 <ul class="about">
                     <h4 class="church-main-details__title">ABOUT</h4>
-                    <li class="about__title"><a href="#">Departments</a></li>
-                    <li class="about__title"><a href="#">The Church</a></li>
-                    <li class="about__title"><a href="#">Our Pastorate</a></li>
-                    <li class="about__title"><a href="#">Our Locations</a></li>
+                    <li class="about__title"><a href="./about/departments.html">Departments</a></li>
+                    <li class="about__title"><a href="./about/church.html">The Church</a></li>
+                    <li class="about__title"><a href="./about/pastorate.html">Our Pastorate</a></li>
+                    <li class="about__title"><a href="./about/church.html#our-locations">Our Locations</a></li>
                 </ul>
                 <ul class="follow-us">
                     <h4 class="church-main-details__title">FLLOW US</h4>
@@ -123,12 +125,12 @@
                 </ul>
                 <ul class="events">
                     <h4 class="church-main-details__title">EVENTS</h4>
-                    <li class="events__title"><a href="#">Children's Day</a></li>
-                    <li class="events__title"><a href="#">Youth Weekend</a></li>
-                    <li class="events__title"><a href="#">Tehilah</a></li>
-                    <li class="events__title"><a href="#">Night Of 12 Convention</a></li>
-                    <li class="events__title"><a href="#">Kingdom Life Convention</a></li>
-                    <li class="events__title"><a href="#">Living in Love and Harmony</a></li>
+                    <li class="events__title"><a href="#childrens-day">Children's Day</a></li>
+                    <li class="events__title"><a href="#youth-weekend">Youth Weekend</a></li>
+                    <li class="events__title"><a href="#tehilah">Tehilah</a></li>
+                    <li class="events__title"><a href="#12lessons">Night Of 12 Convention</a></li>
+                    <li class="events__title"><a href="#klc">Kingdom Life Convention</a></li>
+                    <li class="events__title"><a href="#living-in-love">Living in Love and Harmony</a></li>
                 </ul>
             </div>
     

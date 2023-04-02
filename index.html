@@ -9,17 +9,26 @@
     <title>DCA</title>
 </head>
 <body>
-    <div class="dim-background" id="dim-background"></div>
+    <div class="popup-sermon-container" id="popup-sermon-container">        
+        <span class="close-popup-sermon" id="close-popup-sermon">
+            <img src="./assets/icons/close.svg" />
+        </span>
+        <iframe class="popup-sermon" id="popup-sermon" src="https://www.youtube.com/embed/RW1Y1TkEp5I" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+    </div>
+    <div class="dim-background" id="dim-background">
+    </div>
     <div class="nav-container">
         <!-- navigation -->
         <nav class="nav">
-            <section class="nav__logo">
-                <img class="nav__logo-img" src="./assets/icons/Logo.png" alt="logo"></img>
-                <p class="nav__logo-text">Divine Christian Assembly</p>
-            </section>
+            <a href="#">
+                <section class="nav__logo">
+                    <img class="nav__logo-img" src="./assets/icons/Logo.png" alt="logo"></img>
+                    <p class="nav__logo-text">Divine Christian Assembly</p>
+                </section>
+            </a>
     
             <ul class="nav-items slide-out" id="side-menu">
-                <li class="nav-items__item nav-items__item--active"><a href="#">Home</a></li>
+                <li class="nav-items__item nav-items__item--active"><a href="">Home</a></li>
                 <li class="nav-items__item"><a href="#">Resources</a></li>
                 <li class="nav-items__item"><a href="./pages/events.html">Events</a></li>
                 <li class="nav-items__item"><a href="./pages/give.html">Give</a></li>
@@ -28,18 +37,14 @@
                     About
                     <ul class="dropdown">
                         <!-- use dropdown__items--active class to indicate active about page" -->
-                        <li class="dropdown__items">The Church</li>
-                        <li class="dropdown__items"><a href="./pages/about/pastorate.html">Our Pastorate</a></li>
-                        <li class="dropdown__items">Departments</li>
+                        <a href="./pages/about/church.html"><li class="dropdown__items">The Church</li></a>
+                        <a href="./pages/about/pastorate.html"><li class="dropdown__items">Our Pastorate</li></a>
+                        <a href="./pages/about/departments.html"><li class="dropdown__items">Departments</li></a>
                     </ul>
                 </li>
-    
-                <!-- <span class="nav-items__close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </span> -->
             </ul>
     
-            <!-- TODO: add menu icon here later for mobile -->
+            <!-- menu icon for mobile -->
             <span class="nav__menu" id="menu-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#565656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </span>
@@ -63,147 +68,149 @@
                 <img src="./assets/images/carousel-slide-3.jpeg" alt="carousel slide">
            </section>  -->
 
-           <section class="slide-indicators">
+           <!-- TODO: show indicators when carousel is done -->
+           <!-- <section class="slide-indicators">
                <span class="slide-indicators__indicator"></span>
                <span class="slide-indicators__indicator"></span>
                 <span class="slide-indicators__indicator indicator-active"></span>
                 <span class="slide-indicators__indicator"></span>
                 <span class="slide-indicators__indicator"></span>
-           </section>
+           </section> -->
         </div>
 
         <!-- Upcoming Events -->
-        <div class="upcoming-event">
-            <h1 class="upcoming-event__title header-title" id="upcoming-event-title">Annual Convention</h1>
-
-            <section class="countdown">
-                <section class="countdown-days">
-                    <p class="countdown-value" id="countdown-days">00</p>
-                    <p class="countdown-text">DAYS</p>
+        <div class="body-container">
+            <div class="upcoming-event">
+                <h1 class="upcoming-event__title header-title" id="upcoming-event-title">Kingdom Life Convention</h1>
+    
+                <section class="countdown">
+                    <section class="countdown-days">
+                        <p class="countdown-value" id="countdown-days">00</p>
+                        <p class="countdown-text">DAYS</p>
+                    </section>
+                    <section class="countdown-hours">
+                        <p class="countdown-value" id="countdown-hours">00</p>
+                        <p class="countdown-text">HOURS</p>
+                    </section>
+                    <section class="countdown-minutes">
+                        <p class="countdown-value" id="countdown-mins">00</p>
+                        <p class="countdown-text">MINUTES</p>
+                    </section>
+                    <section class="countdown-seconds">
+                        <p class="countdown-value" id="countdown-secs">00</p>
+                        <p class="countdown-text">SECONDS</p>
+                    </section>
                 </section>
-                <section class="countdown-hours" id="countdown-hours">
-                    <p class="countdown-value">00</p>
-                    <p class="countdown-text">HOURS</p>
-                </section>
-                <section class="countdown-minutes">
-                    <p class="countdown-value">00</p>
-                    <p class="countdown-text">MINUTES</p>
-                </section>
-                <section class="countdown-seconds">
-                    <p class="countdown-value">00</p>
-                    <p class="countdown-text">SECONDS</p>
-                </section>
-            </section>
-
-            <button class="upcoming-events__btn btn">See All Events</button>
-        </div>
-        
-        <!-- Founders -->
-        <div class="founders">
-            <!-- TODO: contemplate which is better, <img> or css image background -->
-            <!-- <img src="./assets/images/founders.jpeg" alt="photo of founders" class="founders-img"> -->
-            <div class="founders-img"></div>
-            <div class="founders-details-wrapper">
-                <section class="founders-details">
-                    <h1 class="founders-details__title header-title">Meet Our Founders</h1>
-                    <p class="founders-details__name">Rev. Dr. Emmanuel Olubayo Folarin</p>
-                    <p class="founders-details__name">Rev. Dr. Mrs. Felicia Eyitope Folarin</p>
-                </section>
-                <button class="founders__btn btn">See All Founders</button>
+    
+                <a href="./pages/events.html"><button class="upcoming-events__btn btn">See All Events</button></a>
             </div>
-        </div>
-
-        <!-- Mission, Vision and Values -->
-        <div class="mission-vision-values">
-            <section class="vision">
-                <h1 class="vision__title">Our Vision</h1>
-                <p class="vision__message">A place where a person with no church background can come and feel comfortable and enjoy God’s presence.</p>
-            </section>
-            <section class="mission">
-                <h1 class="mission__title">Our Mission</h1>
-                <p class="mission__message">Preparing the bride of Christ in a holy and acceptable manner as pre-purposed by God, reaching the unreached through mission.​</p>
-            </section>
-            <section class="values">
-                <h1 class="values__title">Our Values</h1>
-                <p class="values__message">We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday life.</p>
-            </section>
-        </div>
-
-        <!-- Pastorate -->
-        <div class="pastorate">
-            <h1 class="pastorate__title header-title">Pastorate</h1>
-            <div class="pastors-container">                
-                <section class="pastors">
-                    <!-- TODO: contemplate which is better, <img> or css image background -->
-                    <div class="pastors__img-1"></div>
-                    <!-- <img src="./assets/images/pastorate1.jpeg" alt="pastor's image" class="pastors__img"> -->
-                    <div class="pastors-credentials">
-                        <h4 class="pastors-credentials__details">Resident Pastor</h4>
-                        <p class="pastors-credentials__details">Olubayo Folarin</p>
-                    </div>
+            
+            <!-- Founders -->
+            <div class="founders">
+                <!-- TODO: contemplate which is better, <img> or css image background -->
+                <!-- <img src="./assets/images/founders.jpeg" alt="photo of founders" class="founders-img"> -->
+                <div class="founders-img"></div>
+                <div class="founders-details-wrapper">
+                    <section class="founders-details">
+                        <h1 class="founders-details__title header-title">Meet Our Founders</h1>
+                        <p class="founders-details__name">Rev. Dr. Emmanuel Olubayo Folarin</p>
+                        <p class="founders-details__name">Rev. Dr. Mrs. Felicia Eyitope Folarin</p>
+                    </section>
+                    <a href="./pages/about/pastorate.html"><button class="founders__btn btn">See All Founders</button></a>
+                </div>
+            </div>
+    
+            <!-- Mission, Vision and Values -->
+            <div class="mission-vision-values">
+                <section class="vision">
+                    <h1 class="vision__title">Our Vision</h1>
+                    <p class="vision__message">A place where a person with no church background can come and feel comfortable and enjoy God’s presence.</p>
                 </section>
-                <section class="pastors">
-                    <div class="pastors__img-2"></div>
-                    <!-- <img src="./assets/images/pastorate2.jpeg" alt="pastor's image" class="pastors__img"> -->
-                    <div class="pastors-credentials">
-                        <h4 class="pastors-credentials__details">Branch Pastor</h4>
-                        <p class="pastors-credentials__details">Deac Ekule P.O Barry</p>
-                    </div>
+                <section class="mission">
+                    <h1 class="mission__title">Our Mission</h1>
+                    <p class="mission__message">Preparing the bride of Christ in a holy and acceptable manner as pre-purposed by God, reaching the unreached through mission.​</p>
                 </section>
-                <section class="pastors">
-                    <div class="pastors__img-3"></div>
-                    <!-- <img src="./assets/images/pastorate3.jpeg" alt="pastor's image" class="pastors__img"> -->
-                    <div class="pastors-credentials">
-                        <h4 class="pastors-credentials__details">Church Admin (Operations)</h4>
-                        <p class="pastors-credentials__details">Uyakemegbia Funfade Temitope</p>
-                    </div>
+                <section class="values">
+                    <h1 class="values__title">Our Values</h1>
+                    <p class="values__message">We believe that the Bible is God’s Word. It is accurate, authoritative and applicable to our everyday life.</p>
                 </section>
             </div>
-
-            <button class="pastors__btn btn">See All Pastors</button>
-        </div>
-
-        <!-- Testimonies -->
-        <div class="testimonies">
-            <h1 class="testiomies-container__title header-title">
-                Testimonies
-            </h1>
-            <!-- TODO: this will be replaced by API (JSON file for now) as testimonies will change frequently. -->
-
-            <div class="testimony-container" id="testimony-container">
-                <section class="testimony" id="testimony">
-                    <p class="testimony__msg">
-                        I want to thank God for His kindness, I got promoted at Work!
-                    </p>
-                    <p class="testimony__name"> — Brother David</p>
-                </section>
-                <section class="testimony" id="testimony">
-                    <p class="testimony__msg">
-                        I want to thank God for His kindness, I got promoted at Work!
-                    </p>
-                    <p class="testimony__name"> — Brother David</p>
-                </section>
-                <section class="testimony" id="testimony">
-                    <p class="testimony__msg">
-                        I want to thank God for His kindness, I got promoted at Work!
-                    </p>
-                    <p class="testimony__name"> — Brother David</p>
-                </section>
-                <section class="testimony" id="testimony">
-                    <p class="testimony__msg">
-                        I want to thank God for His kindness, I got promoted at Work!
-                    </p>
-                    <p class="testimony__name"> — Brother David</p>
-                </section>
-                <section class="testimony" id="testimony">
-                    <p class="testimony__msg">
-                        I want to thank God for His kindness, I got promoted at Work!
-                    </p>
-                    <p class="testimony__name"> — Brother David</p>
-                </section>
+    
+            <!-- Pastorate -->
+            <div class="pastorate">
+                <h1 class="pastorate__title header-title">Pastorate</h1>
+                <div class="pastors-container">                
+                    <section class="pastors">
+                        <!-- TODO: contemplate which is better, <img> or css image background -->
+                        <div class="pastors__img-1"></div>
+                        <!-- <img src="./assets/images/pastorate1.jpeg" alt="pastor's image" class="pastors__img"> -->
+                        <div class="pastors-credentials">
+                            <h4 class="pastors-credentials__details">Resident Pastor</h4>
+                            <p class="pastors-credentials__details">Olubayo Folarin</p>
+                        </div>
+                    </section>
+                    <section class="pastors">
+                        <div class="pastors__img-2"></div>
+                        <!-- <img src="./assets/images/pastorate2.jpeg" alt="pastor's image" class="pastors__img"> -->
+                        <div class="pastors-credentials">
+                            <h4 class="pastors-credentials__details">Branch Pastor</h4>
+                            <p class="pastors-credentials__details">Deac Ekule P.O Barry</p>
+                        </div>
+                    </section>
+                    <section class="pastors">
+                        <div class="pastors__img-3"></div>
+                        <!-- <img src="./assets/images/pastorate3.jpeg" alt="pastor's image" class="pastors__img"> -->
+                        <div class="pastors-credentials">
+                            <h4 class="pastors-credentials__details">Church Admin (Operations)</h4>
+                            <p class="pastors-credentials__details">Uyakemegbia Funfade Temitope</p>
+                        </div>
+                    </section>
+                </div>
+    
+                <a href="./pages/about/pastorate.html"><button class="pastors__btn btn">See All Pastors</button></a>
             </div>
-        </div>
-        
+    
+            <!-- Testimonies -->
+            <div class="testimonies">
+                <h1 class="testiomies-container__title header-title">
+                    Testimonies
+                </h1>
+                <!-- TODO: this will be replaced by API (JSON file for now) as testimonies will change frequently. -->
+    
+                <div class="testimony-container" id="testimony-container">
+                    <section class="testimony" id="testimony">
+                        <p class="testimony__msg">
+                            I want to thank God for His kindness, I got promoted at Work!
+                        </p>
+                        <p class="testimony__name"> — Brother David</p>
+                    </section>
+                    <section class="testimony" id="testimony">
+                        <p class="testimony__msg">
+                            I want to thank God for His kindness, I got promoted at Work!
+                        </p>
+                        <p class="testimony__name"> — Brother David</p>
+                    </section>
+                    <section class="testimony" id="testimony">
+                        <p class="testimony__msg">
+                            I want to thank God for His kindness, I got promoted at Work!
+                        </p>
+                        <p class="testimony__name"> — Brother David</p>
+                    </section>
+                    <section class="testimony" id="testimony">
+                        <p class="testimony__msg">
+                            I want to thank God for His kindness, I got promoted at Work!
+                        </p>
+                        <p class="testimony__name"> — Brother David</p>
+                    </section>
+                    <section class="testimony" id="testimony">
+                        <p class="testimony__msg">
+                            I want to thank God for His kindness, I got promoted at Work!
+                        </p>
+                        <p class="testimony__name"> — Brother David</p>
+                    </section>
+                </div>
+            </div>
+            
             <!-- Church Activities -->
             <div class="activities-container">
                 <h1 class="activities-container__header header-title">Activities</h1>
@@ -259,6 +266,7 @@
                 <h1 class="word-for-the-year__sub-word">OUR YEAR OF</h1>
                 <h1 class="word-for-the-year__word">OPEN DOORS</h1>
             </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -283,10 +291,10 @@
             <div class="church-main-details">
                 <ul class="about">
                     <h4 class="church-main-details__title">ABOUT</h4>
-                    <li class="about__title"><a href="#">Departments</a></li>
-                    <li class="about__title"><a href="#">The Church</a></li>
-                    <li class="about__title"><a href="#">Our Pastorate</a></li>
-                    <li class="about__title"><a href="#">Our Locations</a></li>
+                    <li class="about__title"><a href="./pages/about/departments.html">Departments</a></li>
+                    <li class="about__title"><a href="./pages/about/church.html">The Church</a></li>
+                    <li class="about__title"><a href="./pages/about/pastorate.html">Our Pastorate</a></li>
+                    <li class="about__title"><a href="./pages/about/church.html#our-locations">Our Locations</a></li>
                 </ul>
                 <ul class="follow-us">
                     <h4 class="church-main-details__title">FLLOW US</h4>
@@ -297,12 +305,12 @@
                 </ul>
                 <ul class="events">
                     <h4 class="church-main-details__title">EVENTS</h4>
-                    <li class="events__title"><a href="#">Children's Day</a></li>
-                    <li class="events__title"><a href="#">Youth Weekend</a></li>
-                    <li class="events__title"><a href="#">Tehilah</a></li>
-                    <li class="events__title"><a href="#">Night Of 12 Convention</a></li>
-                    <li class="events__title"><a href="#">Kingdom Life Convention</a></li>
-                    <li class="events__title"><a href="#">Living in Love and Harmony</a></li>
+                    <li class="events__title"><a href="./pages/events.html#childrens-day">Children's Day</a></li>
+                    <li class="events__title"><a href="./pages/events.html#youth-weekend">Youth Weekend</a></li>
+                    <li class="events__title"><a href="./pages/events.html#tehilah">Tehilah</a></li>
+                    <li class="events__title"><a href="./pages/events.html#12lessons">Night Of 12 Convention</a></li>
+                    <li class="events__title"><a href="./pages/events.html#klc">Kingdom Life Convention</a></li>
+                    <li class="events__title"><a href="./pages/events.html#living-in-love">Living in Love and Harmony</a></li>
                 </ul>
             </div>
     

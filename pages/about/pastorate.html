@@ -11,13 +11,26 @@
 </head>
 <body>
     <div class="dim-background" id="dim-background"></div>
+    <div class="bio-container" id="bio-container">
+        <div class="bio">
+            <div class="bio__role">
+                <span class="close-bio" id="close-bio">
+                    <img src="../../assets/icons/close.svg" />
+                </span>
+                <h2 id="bio-role">role</h2>
+            </div>
+            <p class="bio__desc"  id="bio-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor adipisci voluptatem distinctio accusantium aspernatur nemo ipsam nostrum exercitationem accusamus sapiente minus, eum ipsum sit id neque! Tenetur pariatur quibusdam dolorem? Alias nihil reprehenderit minima maiores! Suscipit architecto deserunt nam officia nulla expedita quaerat optio facilis a, quasi, dignissimos saepe mollitia magni sint et excepturi laudantium numquam officiis provident accusantium libero veniam soluta similique? Reiciendis veniam molestias veritatis alias omnis neque voluptatem impedit consectetur modi quisquam vel, deserunt perferendis tempora numquam quod est velit facere? Ullam in libero, earum eos veritatis expedita doloremque quae sed facere rerum eaque error nemo quod voluptatibus adipisci soluta quos corporis a culpa perferendis nobis tempora minus. Nulla magnam repellendus nemo quas molestiae sequi error quos qui explicabo ex laudantium voluptas quo voluptate quam at consequatur officia molestias vero veniam, dolorum deserunt a. Eos blanditiis assumenda recusandae provident tenetur praesentium, perspiciatis excepturi aliquam sed cum quidem animi officiis maxime ut. Maxime neque odit consequuntur porro accusamus, vero eaque minima distinctio et sit blanditiis tempore iure, ipsam, voluptas ipsum alias excepturi facilis dolores amet quas quia doloremque praesentium deleniti? Nostrum ex laborum natus iure fuga, libero, deleniti perspiciatis consequatur explicabo cupiditate voluptatum numquam veniam repellat fugiat quibusdam suscipit odit quas! Earum perspiciatis omnis molestiae quam. Id odit quae maiores inventore nemo. Blanditiis natus praesentium beatae ipsam, ducimus in obcaecati ab totam est sunt ad dolor atque possimus et error voluptatum placeat eaque architecto. Molestiae doloremque assumenda perspiciatis hic necessitatibus totam laboriosam beatae dicta aut quia porro quae rerum omnis quo earum sed, ad repudiandae modi ab, velit eos! Voluptas delectus neque eius, quo dicta natus alias, nobis omnis tempora modi assumenda! Quis amet, ipsum culpa maxime laboriosam sunt tempora, officiis, vel ea asperiores facere totam deserunt nulla facilis quasi aliquid quisquam recusandae provident iusto? Porro, distinctio iste repellat cumque esse neque, nobis nisi, est provident doloribus animi! Ullam error vitae, ducimus, voluptatum veritatis quae reiciendis est cumque eveniet dolorum, recusandae dignissimos magnam laborum. Nisi officia earum laboriosam, molestias tempore cumque facilis accusantium pariatur repellat consequatur similique? Saepe magni debitis sequi distinctio corporis officiis exercitationem fugit architecto quisquam quae id quia harum voluptatibus, voluptates quos? Quasi, tempore voluptatum incidunt ad debitis quo sit dolor inventore. Nemo dolores sunt autem maiores sit iusto exercitationem atque corporis? Natus, quo magni? Odit recusandae harum optio corporis aut ea corrupti officiis aspernatur animi ratione nesciunt obcaecati, fugit doloribus dignissimos illum quis accusamus?</p>
+        </div>
+    </div>
     <div class="nav-container">
         <!-- navigation -->
         <nav class="nav">
-            <section class="nav__logo">
-                <img class="nav__logo-img" src="../../assets/icons/Logo.png" alt="logo"></img>
-                <p class="nav__logo-text">Divine Christian Assembly</p>
-            </section>
+            <a href="../../index.html">                
+                <section class="nav__logo">
+                    <img class="nav__logo-img" src="../../assets/icons/Logo.png" alt="logo"></img>
+                    <p class="nav__logo-text">Divine Christian Assembly</p>
+                </section>
+            </a>
     
             <ul class="nav-items slide-out" id="side-menu">
                 <li class="nav-items__item"><a href="../../index.html">Home</a></li>
@@ -29,9 +42,9 @@
                     About
                     <ul class="dropdown">
                         <!-- use dropdown__items--active class to indicate active about page" -->
-                        <li class="dropdown__items">The Church</li>
-                        <li class="dropdown__items dropdown__items--active">Our Pastorate</li>
-                        <li class="dropdown__items">Departments</li>
+                        <a href="church.html"><li class="dropdown__items">The Church</li></a>
+                        <a href="#"><li class="dropdown__items dropdown__items--active">Our Pastorate</li></a>
+                        <a href="departments.html"><li class="dropdown__items">Departments</li></a>
                     </ul>
                 </li>
             </ul>
@@ -154,10 +167,10 @@
             <div class="church-main-details">
                 <ul class="about">
                     <h4 class="church-main-details__title">ABOUT</h4>
-                    <li class="about__title"><a href="#">Departments</a></li>
-                    <li class="about__title"><a href="#">The Church</a></li>
+                    <li class="about__title"><a href="./departments.html">Departments</a></li>
+                    <li class="about__title"><a href="./church.html">The Church</a></li>
                     <li class="about__title"><a href="#">Our Pastorate</a></li>
-                    <li class="about__title"><a href="#">Our Locations</a></li>
+                    <li class="about__title"><a href="./church.html#our-locations">Our Locations</a></li>
                 </ul>
                 <ul class="follow-us">
                     <h4 class="church-main-details__title">FLLOW US</h4>
@@ -168,12 +181,12 @@
                 </ul>
                 <ul class="events">
                     <h4 class="church-main-details__title">EVENTS</h4>
-                    <li class="events__title"><a href="#">Children's Day</a></li>
-                    <li class="events__title"><a href="#">Youth Weekend</a></li>
-                    <li class="events__title"><a href="#">Tehilah</a></li>
-                    <li class="events__title"><a href="#">Night Of 12 Convention</a></li>
-                    <li class="events__title"><a href="#">Kingdom Life Convention</a></li>
-                    <li class="events__title"><a href="#">Living in Love and Harmony</a></li>
+                    <li class="events__title"><a href="../events.html#childrens-day">Children's Day</a></li>
+                    <li class="events__title"><a href="../events.html#youth-weekend">Youth Weekend</a></li>
+                    <li class="events__title"><a href="../events.html#tehilah">Tehilah</a></li>
+                    <li class="events__title"><a href="../events.html#12lessons">Night Of 12 Convention</a></li>
+                    <li class="events__title"><a href="../events.html#klc">Kingdom Life Convention</a></li>
+                    <li class="events__title"><a href="../events.html#living-in-love">Living in Love and Harmony</a></li>
                 </ul>
             </div>
     
@@ -181,6 +194,6 @@
         <p class="footer-date">Divine Christian Assembly &copy <span id="footer-date">2023</span></p>
     </div>
 
-    <script src="../../utils/interaction.js"></script>
+    <script src="./pastorate.js" type="module"></script>
 </body>
 </html>
