@@ -1,14 +1,10 @@
 [
     {
-        "title": "Sunday Service",
-        "days": 10
+        "name": "Kingdom Life Convention",
+        "date": "2023-04-07"
     },
     {
-        "title": "Prayer Bank",
-        "days": 25
-    },
-    {
-        "title": "Kingdom Live Convention",
-        "days": 40
+        "name": "Sunday Service",
+        "date": "2023-04-09"
     }
 ]
