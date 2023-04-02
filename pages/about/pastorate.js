@@ -1,5 +1,3 @@
-import pastors from '../../json/pastorate.json' assert {type: 'json'};
-
 // GET DOM ELEMENTS
 const dimBackground = document.getElementById('dim-background');
 const sideMenu = document.getElementById('side-menu');
@@ -41,22 +39,6 @@ dimBackground.addEventListener('click', () => {
     if (sideMenu.classList.contains('slide-in')) menuIcon.click();
 });
 
-
-// BIO MODAL
-for (let details of bioCredentials) {
-    details.addEventListener('click', (e) => {
-        const role = e.target.parentElement.firstElementChild.innerText;
-        const name = e.target.previousElementSibling.innerText;
-        const details = pastors[name];
-        bioRole.innerText = role;
-        bioDesc.innerText = details;
-
-        document.body.style.overflow = 'hidden';
-        show(dimBackground);
-        show(bioContainer, 'flex');
-    });
-}
-
 closeBio.addEventListener('click', () => {
     bioContainer.classList.toggle('fade-in');
     bioContainer.classList.toggle('fade-out');
@@ -64,3 +46,24 @@ closeBio.addEventListener('click', () => {
     hide(bioContainer);
     document.body.style.overflow = 'scroll';
 });
+
+(async function () {
+    const response = await fetch('../../json/pastorate.json');
+    const pastors = await response.json();
+
+    // BIO MODAL
+    for (let details of bioCredentials) {
+        details.addEventListener('click', (e) => {
+            const role = e.target.parentElement.firstElementChild.innerText;
+            const name = e.target.previousElementSibling.innerText;
+            const details = pastors[name];
+            bioRole.innerText = role;
+            bioDesc.innerText = details;
+
+            document.body.style.overflow = 'hidden';
+            show(dimBackground);
+            show(bioContainer, 'flex');
+        });
+    }
+})();
+

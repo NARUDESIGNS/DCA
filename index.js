@@ -1,6 +1,5 @@
 // basic and general computation will be done here, this is linked to the index.html files
 import './utils/interaction.js';
-import upcomingEvent from './json/upcomingEvent.json' assert {type: 'json'};
 
 const dimBackground = document.getElementById('dim-background');
 const closePopupSermonBtn = document.getElementById('close-popup-sermon');
@@ -40,7 +39,7 @@ let currentPosition;
 const popupSermonTimer = setTimeout(() => {
     document.body.style.overflow = 'hidden';
     currentPosition = window.scrollY;
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     show(dimBackground);
     show(popupSermonContainer);
     clearTimeout(popupSermonTimer);
@@ -62,38 +61,46 @@ closePopupSermonBtn.addEventListener('click', () => {
 // });
 
 
-// COUNTDOWN 
-let date;
-const today = new Date();
-// check for next event date by comparing it to today's date. 
-// If upcoming date is greater than today, then set upcomind event
-for (let event of upcomingEvent) {
-    if (event && new Date(event.date) > today) {
-        upcomingEventTitle.innerText = event.name;
-        const [yy, mm , dd] = event.date.split('-');
-        date = new Date(yy, mm - 1, dd);
-        break;
+(async function () {
+    const response = await fetch('./json/upcomingEvent.json');
+    const upcomingEvent = await response.json();
+
+    // COUNTDOWN 
+    let date;
+    const today = new Date();
+    // check for next event date by comparing it to today's date. 
+    // If upcoming date is greater than today, then set upcomind event
+    for (let event of upcomingEvent) {
+        if (event && new Date(event.date) > today) {
+            upcomingEventTitle.innerText = event.name;
+            const [yy, mm, dd] = event.date.split('-');
+            date = new Date(yy, mm - 1, dd);
+            break;
+        }
     }
-}
-const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+    const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
 
-const countdown = setInterval(() => {
-    if (date < today) return;
-    
-    const numOfDays = date > today ? Math.floor((date - today)/oneDay) : '00';
-    let days = numOfDays;
-    let hours = 23 >= new Date().getHours() ? 23 - new Date().getHours() : 0;
-    let mins = 60 - new Date().getMinutes();
-    let secs = 60 - new Date().getSeconds();
+    const countdown = setInterval(() => {
+        if (date < today) return;
 
-    // reset timer when days are over
-    if (!Number(days) || days < 0) {
-        days = hours =  mins = secs = 0;
-        clearInterval(countdown);
-    }
+        const numOfDays = date > today ? Math.floor((date - today) / oneDay) : '00';
+        let days = numOfDays;
+        let hours = 23 >= new Date().getHours() ? 23 - new Date().getHours() : 0;
+        let mins = 60 - new Date().getMinutes();
+        let secs = 60 - new Date().getSeconds();
 
-    countdownSecs.innerText = secs.toString().padStart(2, '0');
-    countdownMins.innerText = mins.toString().padStart(2, '0');
-    countdownHours.innerText = hours.toString().padStart(2, '0');
-    countdownDays.innerText = days.toString().padStart(2, '0');
-}, 1000);
+        // reset timer when days are over
+        if (!Number(days) || days < 0) {
+            days = hours = mins = secs = 0;
+            clearInterval(countdown);
+        }
+
+        countdownSecs.innerText = secs.toString().padStart(2, '0');
+        countdownMins.innerText = mins.toString().padStart(2, '0');
+        countdownHours.innerText = hours.toString().padStart(2, '0');
+        countdownDays.innerText = days.toString().padStart(2, '0');
+    }, 1000);
+})();
+
+
+
