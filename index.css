@@ -30,6 +30,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-text-color);
     font-weight: 400;
+    line-height: 2;
 }
 
 /* Generally used styles ------------------------- */
@@ -48,6 +49,40 @@ a {
     z-index: 5;
     background-color: rgba(25, 13, 49, 0.8);
     backdrop-filter: blur(1.5px);
+}
+.popup-sermon-container {
+    display: none;
+}
+.close-popup-sermon {
+    position: absolute;
+    top: calc(50% - 280px);
+    /* left: 90%; */
+    right: calc(50% - 375px);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #ff0200; */
+    /* border-radius: 50%; */
+    z-index: 10;
+    cursor: pointer;
+}
+.popup-sermon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 750px;
+    height: 80%;
+    max-height: 500px;
+    z-index: 10;
 }
 
 .dropdown {
@@ -68,7 +103,7 @@ a {
 }
 .dropdown__items {
     padding: 15px;
-    border-radius: inherit;
+    border-radius: 8px;
 }
 .dropdown__items:hover {
     color: var(--secondary-text-color);
@@ -228,6 +263,10 @@ a {
     background-color: white;
 }
 
+.body-container {
+    margin: 0 var(--spacing-lg);
+}
+
 .upcoming-event {
     padding: 20px;
     margin: 0 auto;
@@ -275,7 +314,7 @@ a {
     display: flex;
     align-items: center;
     gap: 100px;
-    padding: 0 var(--spacing-lg);
+    /* padding: 0 var(--spacing-lg); */
     padding-top: 0;
     /* margin-bottom: var(--spacing-lg); */
     margin-bottom: 40px;
@@ -303,7 +342,7 @@ margin-bottom: var(--spacing-lg)
 .mission-vision-values {
     background-color: var(--light-blue-bg);
     padding: var(--spacing-lg);
-    margin: 0 var(--spacing-lg);
+    /* margin: 0 var(--spacing-lg); */
     margin-bottom: var(--spacing-lg);
     border-radius: 10px;
     display: flex;
@@ -323,7 +362,6 @@ margin-bottom: var(--spacing-lg)
 }
 
 .pastorate {
-    border: var(--fill-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -390,7 +428,7 @@ margin-bottom: var(--spacing-lg)
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 0 var(--spacing-lg);
+    /* padding: 0 var(--spacing-lg); */
 }
 .testimony {
     padding: 30px;
@@ -408,7 +446,7 @@ margin-bottom: var(--spacing-lg)
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 var(--spacing-lg);
+    /* margin: 0 var(--spacing-lg); */
     margin-bottom: var(--spacing-lg);
 }
 .activities-container__header {
@@ -612,6 +650,8 @@ margin-bottom: var(--spacing-lg)
 
     .nav__menu,
     .nav-items__close {
+        padding: 10px;
+        padding-right: 0;
         display: inherit;
     }
 
@@ -690,6 +730,12 @@ margin-bottom: var(--spacing-lg)
     .activities {
         flex-wrap: wrap;
         gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .close-popup-sermon {
+        left: 90%;
     }
 }
 
