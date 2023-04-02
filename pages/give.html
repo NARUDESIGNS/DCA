@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="./give.css">
     <link rel="shortcut icon" href="../assets/icons/Logo.png" type="image/x-icon">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <title>DCA | Give</title>
 </head>
+
 <body>
     <div class="dim-background" id="dim-background"></div>
     <div class="nav-container">
@@ -20,7 +23,7 @@
                     <p class="nav__logo-text">Divine Christian Assembly</p>
                 </section>
             </a>
-    
+
             <ul class="nav-items slide-out" id="side-menu">
                 <li class="nav-items__item"><a href="../index.html">Home</a></li>
                 <li class="nav-items__item"><a href="#">Resources</a></li>
@@ -31,15 +34,27 @@
                     About
                     <ul class="dropdown">
                         <!-- use dropdown__items--active class to indicate active about page" -->
-                        <a href="./about/church.html"><li class="dropdown__items">The Church</li></a>
-                        <a href="./about/pastorate.html"><li class="dropdown__items">Our Pastorate</li></a>
-                        <a href="./about/departments.html"><li class="dropdown__items">Departments</li></a>
+                        <a href="./about/church.html">
+                            <li class="dropdown__items">The Church</li>
+                        </a>
+                        <a href="./about/pastorate.html">
+                            <li class="dropdown__items">Our Pastorate</li>
+                        </a>
+                        <a href="./about/departments.html">
+                            <li class="dropdown__items">Departments</li>
+                        </a>
                     </ul>
                 </li>
             </ul>
-    
+
             <span class="nav__menu" id="menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#565656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#565656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
             </span>
         </nav>
     </div>
@@ -60,24 +75,30 @@
                         <img class="bank-header__logo" src="../assets/images/gtb.png" alt="bank logo">
                         <h3 class="bank-header__title">Guaranty Trust Bank</h3>
                     </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0052170741</p>
+                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
+                        Christian Assembly</p>
+                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0052170741
+                    </p>
                 </section>
                 <section class="bank-details">
                     <section class="bank-header">
                         <img class="bank-header__logo" src="../assets/images/firstbank.png" alt="bank logo">
                         <h3 class="bank-header__title">First Bank Of Nigeria</h3>
                     </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>2010380477</p>
+                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
+                        Christian Assembly</p>
+                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>2010380477
+                    </p>
                 </section>
                 <section class="bank-details">
                     <section class="bank-header">
                         <img class="bank-header__logo" src="../assets/images/sterling.png" alt="bank logo">
                         <h3 class="bank-header__title">Sterling Bank</h3>
                     </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0011591367</p>
+                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
+                        Christian Assembly</p>
+                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0011591367
+                    </p>
                 </section>
             </div>
         </div>
@@ -89,18 +110,21 @@
                 <input class="give-details__input" type="email" name="email" id="email" placeholder="Email Address">
                 <input class="give-details__input" type="number" name="amount" id="amount" placeholder="Amount">
                 <select class="give-details__input select-dropdown" name="reason" id="reason">
-                    <option value="reason" disabled selected>Reason</option>
-                    <option value="reason">Offering</option>
-                    <option value="reason">Tithe</option>
-                    <option value="reason">Special Seed</option>
-                    <option value="reason">First Fruit</option>
-                    <option value="reason">Other</option>
+                    <option value="" disabled selected>Reason</option>
+                    <option value="Offering">Offering</option>
+                    <option value="Tithe">Tithe</option>
+                    <option value="Kingdom Partner">Kingdom Partner (DKP)</option>
+                    <option value="Special Seed">Special Seed</option>
+                    <option value="First Fruit">First Fruit</option>
+                    <option value="Other">Other</option>
                 </select>
             </section>
-            <button class="give-container__btn btn">Give</button>
+            <button class="give-container__btn btn" onclick="give()">Give</button>
         </div>
     </div>
 
+    <!-- Notification snackbar -->
+    <div id="notification">Some text some message..</div>
 
     <!-- Footer -->
     <div class="footer" id="footer">
@@ -117,10 +141,11 @@
                         <li class="contact-details__desc">+234-907-999-8247</li>
                         <li class="contact-details__desc">+234-706-448-6152</li>
                     </ul>
-                    <p class="contact-details__desc contact-details__desc-address">33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State</p>
+                    <p class="contact-details__desc contact-details__desc-address">33, Community Road, Off LASU-Isheri
+                        Road, Obadore, Lagos State</p>
                 </section>
             </div>
-    
+
             <div class="church-main-details">
                 <ul class="about">
                     <h4 class="church-main-details__title">ABOUT</h4>
@@ -146,12 +171,13 @@
                     <li class="events__title"><a href="./events.html#living-in-love">Living in Love and Harmony</a></li>
                 </ul>
             </div>
-    
+
         </div>
         <p class="footer-date">Divine Christian Assembly &copy <span id="footer-date">2023</span></p>
     </div>
 
     <script src="../utils/interaction.js"></script>
-    <script src="../utils/give.js"></script>
+    <script src="give.js"></script>
 </body>
+
 </html>
