@@ -203,6 +203,10 @@ a {
 .nav-items__item--active {
     color: var(--fill-color);
 }
+.nav-items__item a {
+    display: inline-block;
+    width: 100%;
+}
 .nav__menu,
 .nav-items__close {
     display: none;
@@ -680,11 +684,13 @@ margin-bottom: var(--spacing-lg)
     
     .about .dropdown {
         left: 0;
+        top: 55px;
         background: none;
         box-shadow: unset;
         font-size: 0.75rem;
         padding: 0;
-        width: 150px;
+        /* width: 150px; */
+        width: 100%;
         color: white;
     }
     .dropdown__items:hover {

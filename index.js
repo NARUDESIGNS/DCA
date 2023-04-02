@@ -70,7 +70,8 @@ const today = new Date();
 for (let event of upcomingEvent) {
     if (event && new Date(event.date) > today) {
         upcomingEventTitle.innerText = event.name;
-        date = new Date(event.date);
+        const [yy, mm , dd] = event.date.split('-');
+        date = new Date(yy, mm - 1, dd);
         break;
     }
 }
