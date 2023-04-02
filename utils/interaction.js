@@ -5,7 +5,7 @@ const menuIcon = document.getElementById('menu-icon');
 
 
 // USABLE FUNCTIONS
-function show(element, display) {
+function show(element, display = 'block') {
     element.style.display = display;
 }
 function hide(element) {
