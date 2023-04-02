@@ -56,9 +56,9 @@ closePopupSermonBtn.addEventListener('click', () => {
 
 
 // hide popup when dim background is clicked
-// dimBackground.addEventListener('click', () => {
-//     closePopupSermonBtn.click();
-// });
+dimBackground.addEventListener('click', () => {
+    closePopupSermonBtn.click();
+});
 
 
 (async function () {
