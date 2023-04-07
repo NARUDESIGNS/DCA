@@ -75,15 +75,14 @@ dimBackground.addEventListener('click', () => {
             upcomingEventTitle.innerText = event.name;
             const [yy, mm, dd] = event.date.split('-');
             date = new Date(yy, mm - 1, dd);
-            date.setHours(9);
             break;
         }
     }
+
     const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
 
     const countdown = setInterval(() => {
         if (date < today) return;
-
         const numOfDays = date > today ? Math.floor((date - today) / oneDay) : '00';
         let days = numOfDays;
         let hours = 23 >= new Date().getHours() ? 23 - new Date().getHours() : 0;
@@ -91,7 +90,7 @@ dimBackground.addEventListener('click', () => {
         let secs = 60 - new Date().getSeconds();
 
         // reset timer when days are over
-        if (!Number(days) || days < 0) {
+        if (days < 0) {
             days = hours = mins = secs = 0;
             clearInterval(countdown);
         }
@@ -102,6 +101,4 @@ dimBackground.addEventListener('click', () => {
         countdownDays.innerText = days.toString().padStart(2, '0');
     }, 1000);
 })();
-
-
 
