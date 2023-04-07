@@ -75,6 +75,7 @@ dimBackground.addEventListener('click', () => {
             upcomingEventTitle.innerText = event.name;
             const [yy, mm, dd] = event.date.split('-');
             date = new Date(yy, mm - 1, dd);
+            date.setHours(9);
             break;
         }
     }
