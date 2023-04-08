@@ -23,7 +23,8 @@
 .pastors__img-5,
 .pastors__img-6,
 .pastors__img-7,
-.pastors__img-8 {
+.pastors__img-8,
+.pastors__img-9 {
     width: 300px;
     height: 400px;
     border-radius: 8px;
@@ -55,6 +56,9 @@
 }
 .pastors__img-8 {
     background-image: url('../../assets/images/pastorate8.jpeg');
+}
+.pastors__img-9 {
+    background-image: url('../../assets/images/pastorate9.jpeg');
 }
 
 .pastors-credentials__bio {
