@@ -49,6 +49,7 @@ a {
     z-index: 5;
     background-color: rgba(25, 13, 49, 0.8);
     backdrop-filter: blur(1.5px);
+    max-height: 100vh;
 }
 .popup-sermon-container {
     display: none;

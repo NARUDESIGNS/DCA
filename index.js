@@ -43,7 +43,7 @@ const popupSermonTimer = setTimeout(() => {
     show(dimBackground);
     show(popupSermonContainer);
     clearTimeout(popupSermonTimer);
-}, 10000);
+}, 7000);
 
 // close popup menu
 closePopupSermonBtn.addEventListener('click', () => {
