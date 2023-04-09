@@ -24,8 +24,9 @@ function hide(element) {
 // NOTE: you have to input embed link, not just link to youtube video 
 // @link https://support.google.com/youtube/answer/171780?hl=en
 const ytSermons = [
-    "https://www.youtube.com/embed/RW1Y1TkEp5I",
-    "https://www.youtube.com/embed/v0v5BJtZxrs",
+    "https://www.youtube.com/embed/atU4_NnjWBQ",
+    "https://www.youtube.com/embed/BwvNfBIokRo",
+    "https://www.youtube.com/embed/fLyLEPs4bWo",
     "https://www.youtube.com/embed/62lWbY6ECDw"
 ];
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
@@ -43,7 +44,7 @@ const popupSermonTimer = setTimeout(() => {
     show(dimBackground);
     show(popupSermonContainer);
     clearTimeout(popupSermonTimer);
-}, 7000);
+}, 1000);
 
 // close popup menu
 closePopupSermonBtn.addEventListener('click', () => {
