@@ -12,6 +12,8 @@ const countdownMins = document.getElementById('countdown-mins');
 const countdownSecs = document.getElementById('countdown-secs');
 const upcomingEventTitle = document.getElementById('upcoming-event-title');
 
+const carouselImage = document.getElementById('carousel-slide');
+
 // USABLE FUNCTIONS
 function show(element, display = 'block') {
     element.style.display = display;
@@ -38,13 +40,13 @@ popupSermon.src = randomSermon;
 // show sermon after 10s
 let currentPosition;
 const popupSermonTimer = setTimeout(() => {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     currentPosition = window.scrollY;
     window.scrollTo(0, 0);
     show(dimBackground);
     show(popupSermonContainer);
     clearTimeout(popupSermonTimer);
-}, 1000);
+}, 7000);
 
 // close popup menu
 closePopupSermonBtn.addEventListener('click', () => {
@@ -60,6 +62,14 @@ closePopupSermonBtn.addEventListener('click', () => {
 dimBackground.addEventListener('click', () => {
     closePopupSermonBtn.click();
 });
+
+setInterval(() => {
+    carouselImage.style.backgroundImage = `url(./assets/images/carousel-slide-${randomFromRange(1, 3)}.jpeg)`;
+}, 4500);
+
+function randomFromRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 
 (async function () {

@@ -228,10 +228,10 @@ a {
     overflow: hidden;
 }
 
-.carousel-slide {
+#carousel-slide {
     height: 100%;
     width: 100%;
-    background-image: url('./assets/images/header1.JPG');
+    background-image: url('./assets/images/carousel-slide-1.jpeg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
