@@ -28,6 +28,10 @@ function hide(element) {
 // NOTE: you have to input embed link, not just link to youtube video 
 // @link https://support.google.com/youtube/answer/171780?hl=en
 const ytSermons = [
+    "https://www.youtube.com/embed/k0GFGMPVtpc",
+    "https://www.youtube.com/embed/qn7IPyTyAuA",
+    "https://www.youtube.com/embed/Biqie_paJxA",
+    "https://www.youtube.com/embed/s7RxptAGeVU",
     "https://www.youtube.com/embed/atU4_NnjWBQ",
     "https://www.youtube.com/embed/BwvNfBIokRo",
     "https://www.youtube.com/embed/fLyLEPs4bWo",
