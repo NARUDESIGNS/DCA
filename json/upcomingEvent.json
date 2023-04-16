@@ -1,18 +1,34 @@
 [
     {
-        "name": "Kingdom Life Convention - Day 1",
-        "date": "2023-04-07"
-    },
-    {
-        "name": "Kingdom Life Convention - Day 2",
-        "date": "2023-04-08"
-    },
-    {
-        "name": "Kingdom Life Convention - Day 3",
-        "date": "2023-04-09"
+        "name": "Sunday Service",
+        "date": "2023-04-16"
     },
     {
         "name": "Sunday Service",
-        "date": "2023-04-16"
+        "date": "2023-04-23"
+    },
+    {
+        "name": "Sunday Service",
+        "date": "2023-04-30"
+    },
+    {
+        "name": "Sunday Service",
+        "date": "2023-05-7"
+    },
+    {
+        "name": "Tehillah",
+        "date": "2023-06-10"
+    },
+    {
+        "name": "Children's Day",
+        "date": "2023-07-9"
+    },
+    {
+        "name": "Oluebube",
+        "date": "2023-09-24"
+    },
+    {
+        "name": "12 Lessons",
+        "date": "2023-12-16"
     }
 ]
