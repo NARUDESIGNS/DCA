@@ -12,6 +12,8 @@ const countdownMins = document.getElementById('countdown-mins');
 const countdownSecs = document.getElementById('countdown-secs');
 const upcomingEventTitle = document.getElementById('upcoming-event-title');
 
+const testimoniesContainer = document.getElementById('testimony-container');
+
 const carouselImage = document.getElementById('carousel-slide');
 
 // USABLE FUNCTIONS
@@ -72,6 +74,7 @@ function randomFromRange(min, max) {
 }
 
 
+// Get upcoming events data
 (async function () {
     const response = await fetch('./json/upcomingEvent.json');
     const upcomingEvent = await response.json();
@@ -96,9 +99,9 @@ function randomFromRange(min, max) {
         if (date < today) return;
         const numOfDays = date > today ? Math.floor((date - today) / oneDay) : '00';
         let days = numOfDays;
-        let hours = 23 >= new Date().getHours() ? 23 - new Date().getHours() : 0;
-        let mins = 60 - new Date().getMinutes();
-        let secs = 60 - new Date().getSeconds();
+        let hours = 23 >= new Date().getUTCHours() ? 23 - new Date().getUTCHours() : 0;
+        let mins = 60 - new Date().getUTCMinutes();
+        let secs = 60 - new Date().getUTCSeconds();
 
         // reset timer when days are over
         if (days < 0) {
@@ -113,3 +116,20 @@ function randomFromRange(min, max) {
     }, 1000);
 })();
 
+
+// Get testimonies
+(async function () {
+    const response = await fetch('./json/testimonies.json');
+    const testimoniesData = await response.json();
+    testimoniesData.map(({name, message}) => {
+        testimoniesContainer.innerHTML += `
+            <section class="testimony" id="testimony">
+                <p class="testimony__msg">
+                    ${message}
+                </p>
+                <p class="testimony__name"> — ${name}</p>
+            </section>
+        `;
+        console.log(name);
+    });
+})();
