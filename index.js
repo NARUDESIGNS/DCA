@@ -70,8 +70,8 @@ dimBackground.addEventListener('click', () => {
 });
 
 setInterval(() => {
-    carouselImage.style.backgroundImage = `url(./assets/images/carousel-slide-${randomFromRange(1, 3)}.jpeg)`;
-}, 4500);
+    carouselImage.style.backgroundImage = `url(./assets/images/carousel-slide-${randomFromRange(1, 12)}.jpeg)`;
+}, 3500);
 
 function randomFromRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
