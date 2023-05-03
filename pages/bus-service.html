@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="./give.css">
+    <link rel="stylesheet" href="./bus-service.css">
     <link rel="shortcut icon" href="../assets/icons/Logo.png" type="image/x-icon">
     <script src="https://js.paystack.co/v1/inline.js"></script>
-    <title>DCA | Give</title>
+    <title>DCA | Bus Service</title>
 </head>
 
 <body>
@@ -29,8 +29,10 @@
                 <li class="nav-items__item nav-items__item about">
                     Resources
                     <ul class="dropdown">
-                       <a href="https://blog.divinechristianassembly.com/"><li class="dropdown__items">Church Blog</li></a>
-<!--                         <li class="dropdown__items">Sermons</li> -->
+                        <a href="https://blog.divinechristianassembly.com/">
+                            <li class="dropdown__items">Church Blog</li>
+                        </a>
+                        <!--                         <li class="dropdown__items">Sermons</li> -->
                     </ul>
                 </li>
                 <li class="nav-items__item"><a href="./events.html">Events</a></li>
@@ -70,67 +72,17 @@
     <div class="main-container">
         <!-- Banner -->
         <div class="banner">
-            <h1 class="banner__text">GIVE</h1>
+            <h1 class="banner__text">BUS SERVICE</h1>
         </div>
-
-        <div class="bank-info">
-            <h1 class="bank-info__title header-title">Bank Accounts</h1>
-            <div class="bank-accounts-container">
-                <section class="bank-details">
-                    <section class="bank-header">
-                        <img class="bank-header__logo" src="../assets/images/gtb.png" alt="bank logo">
-                        <h3 class="bank-header__title">Guaranty Trust Bank</h3>
-                    </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
-                        Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0052170741
-                    </p>
-                </section>
-                <section class="bank-details">
-                    <section class="bank-header">
-                        <img class="bank-header__logo" src="../assets/images/firstbank.png" alt="bank logo">
-                        <h3 class="bank-header__title">First Bank Of Nigeria</h3>
-                    </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
-                        Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>2010380477
-                    </p>
-                </section>
-                <section class="bank-details">
-                    <section class="bank-header">
-                        <img class="bank-header__logo" src="../assets/images/sterling.png" alt="bank logo">
-                        <h3 class="bank-header__title">Sterling Bank</h3>
-                    </section>
-                    <p class="bank-details__account-name"><span class="darken-text">Account Name: </span>Divine
-                        Christian Assembly</p>
-                    <p class="bank-details__account-number"><span class="darken-text">Account Number: </span>0011591367
-                    </p>
-                </section>
-            </div>
-        </div>
-
-        <div class="give-container">
-            <h1 class="give__title header-title">Give Online</h1>
-            <section class="give-details">
-                <input class="give-details__input" type="text" name="fullname" id="fullname" placeholder="Full Name">
-                <input class="give-details__input" type="email" name="email" id="email" placeholder="Email Address">
-                <input class="give-details__input" type="number" name="amount" id="amount" placeholder="Amount">
-                <select class="give-details__input select-dropdown" name="reason" id="reason">
-                    <option value="" disabled selected>Reason</option>
-                    <option value="Offering">Offering</option>
-                    <option value="Tithe">Tithe</option>
-                    <option value="Kingdom Partner">Kingdom Partner (DKP)</option>
-                    <option value="Special Seed">Special Seed</option>
-                    <option value="First Fruit">First Fruit</option>
-                    <option value="Other">Other</option>
-                </select>
-            </section>
-            <button class="give-container__btn btn" onclick="give()">Give</button>
+        <div class="bus-container">
+            <p>This is a bus transportation scheme organised by Divine Christian Assembly to help transport worshippers
+                to our various church branch locations. If you would be interested in this service, please kindly fill
+                out the form.</p>
+            <iframe
+                src="https://docs.google.com/forms/d/1HKtXnZiAz-wm_b6HpCm2SWZHLBLf6IZEcUn8oSztagk/viewform?embedded=true"
+                class="bus-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </div>
-
-    <!-- Notification snackbar -->
-    <div id="notification">Some text some message..</div>
 
     <!-- Footer -->
     <div class="footer" id="footer">
@@ -143,21 +95,21 @@
                 <h4 class="church-details__title">CONTACT</h4>
                 <section class="contact-details-container">
                     <ul class="contact-details">
-                         <li class="contact-details__desc">
-                                <a href="mailto:dcahqt@yahoo.com">dcahqt@yahoo.com</a>
-                            </li>
-                            <li class="contact-details__desc">
-                                <a href="tel:+2349079998247">+234-907-999-8247</a>
-                            </li>
-                            <li class="contact-details__desc">
-                                <a href="tel:+2348023864446">+234-802-386-4446</a>
-                            </li>
+                        <li class="contact-details__desc">
+                            <a href="mailto:dcahqt@yahoo.com">dcahqt@yahoo.com</a>
+                        </li>
+                        <li class="contact-details__desc">
+                            <a href="tel:+2349079998247">+234-907-999-8247</a>
+                        </li>
+                        <li class="contact-details__desc">
+                            <a href="tel:+2348023864446">+234-802-386-4446</a>
+                        </li>
                     </ul>
                     <p class="contact-details__desc contact-details__desc-address">
-                            <a href="https://goo.gl/maps/z548ho43SVrEsVgC7" target="_blank">
-                                33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State
-                            </a>
-                        </p>
+                        <a href="https://goo.gl/maps/z548ho43SVrEsVgC7" target="_blank">
+                            33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State
+                        </a>
+                    </p>
                 </section>
             </div>
 
@@ -171,10 +123,14 @@
                 </ul>
                 <ul class="follow-us">
                     <h4 class="church-main-details__title">FOLLOW US</h4>
-                    <li class="follow-us__title"><a target='_blank'  href="https://twitter.com/divinechristia9">Twitter</a></li>
-                        <li class="follow-us__title"><a target='_blank'  href="https://www.youtube.com/@divinechristianassembly/featured">YouTube</a></li>
-                        <li class="follow-us__title"><a target='_blank'  href="https://web.facebook.com/divinechristianassemblyinc/?_rdc=1&_rdr">Facebook</a></li>
-                        <li class="follow-us__title"><a target='_blank'  href="https://www.instagram.com/divinechristianassembly/?hl=en">Instagram</a></li>
+                    <li class="follow-us__title"><a target='_blank'
+                            href="https://twitter.com/divinechristia9">Twitter</a></li>
+                    <li class="follow-us__title"><a target='_blank'
+                            href="https://www.youtube.com/@divinechristianassembly/featured">YouTube</a></li>
+                    <li class="follow-us__title"><a target='_blank'
+                            href="https://web.facebook.com/divinechristianassemblyinc/?_rdc=1&_rdr">Facebook</a></li>
+                    <li class="follow-us__title"><a target='_blank'
+                            href="https://www.instagram.com/divinechristianassembly/?hl=en">Instagram</a></li>
                 </ul>
                 <ul class="events">
                     <h4 class="church-main-details__title">EVENTS</h4>
