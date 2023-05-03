@@ -68,7 +68,8 @@ a {
     align-items: center;
     justify-content: center;
     /* background: #ff0200; */
-    /* border-radius: 50%; */
+    border-radius: 50%;
+    background: rgb(25, 13, 49);
     z-index: 15;
     cursor: pointer;
 }
