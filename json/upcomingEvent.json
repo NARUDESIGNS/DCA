@@ -1,42 +1,94 @@
 [
-    {
-        "name": "Sunday Service",
-        "date": "2023-04-16"
-    },
-    {
-        "name": "Sunday Service",
-        "date": "2023-04-23"
-    },
-    {
-        "name": "Sunday Service",
-        "date": "2023-04-30"
-    },
-    {
-        "name": "Sunday Service",
-        "date": "2023-05-07"
-    },
-    {
-        "name": "Sunday Service",
-        "date": "2023-05-14"
-    },
-    {
-        "name": "Sunday Service",
-        "date": "2023-05-21"
-    },
-    {
-        "name": "Tehillah",
-        "date": "2023-06-10"
-    },
-    {
-        "name": "Children's Day",
-        "date": "2023-07-9"
-    },
-    {
-        "name": "Oluebube",
-        "date": "2023-09-24"
-    },
-    {
-        "name": "12 Lessons",
-        "date": "2023-12-16"
-    }
+  {
+    "name": "Sunday Service",
+    "date": "2023-04-16"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-04-23"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-04-30"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-05-07"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-05-10"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-05-14"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-05-17"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-05-21"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-05-24"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-05-28"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-05-31"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-06-04"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-06-07"
+  },
+  {
+    "name": "Tehillah",
+    "date": "2023-06-10"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-06-11"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-06-14"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-06-18"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-06-121"
+  },
+  {
+    "name": "Sunday Service",
+    "date": "2023-06-25"
+  },
+  {
+    "name": "Mid Week Service",
+    "date": "2023-06-28"
+  },
+  {
+    "name": "Children's Day",
+    "date": "2023-07-09"
+  },
+  {
+    "name": "Oluebube",
+    "date": "2023-09-24"
+  },
+  {
+    "name": "12 Lessons",
+    "date": "2023-12-16"
+  }
 ]
