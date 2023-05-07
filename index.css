@@ -332,7 +332,7 @@ a {
     background-image: url('./assets/images/founders.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     border-radius: 8px;
 }
 .resident-pastor-img {
