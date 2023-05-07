@@ -52,7 +52,7 @@ const popupSermonTimer = setTimeout(() => {
     show(dimBackground);
     show(popupSermonContainer);
     clearTimeout(popupSermonTimer);
-}, 100);
+}, 10000000);
 
 // close popup menu
 closePopupSermonBtn.addEventListener('click', () => {
@@ -91,8 +91,9 @@ function randomFromRange(min, max) {
     for (let event of upcomingEvent) {
         if (event && new Date(event.date) > today) {
             upcomingEventTitle.innerText = event.name;
-            const [yy, mm, dd] = event.date.split('-');
-            date = new Date(yy, mm - 1, dd);
+            // const [yy, mm, dd] = event.date.split('-');
+            // date = new Date(yy, mm - 1, dd);
+            date = new Date(event.date);
             break;
         }
     }
@@ -103,9 +104,10 @@ function randomFromRange(min, max) {
         if (date < today) return;
         const numOfDays = date > today ? Math.floor((date - today) / oneDay) : '00';
         let days = numOfDays;
-        let hours = 23 >= new Date().getUTCHours() ? 23 - new Date().getUTCHours() : 0;
-        let mins = 60 - new Date().getUTCMinutes();
-        let secs = 60 - new Date().getUTCSeconds();
+        // let hours = 23 >= date.getUTCHours() ? 23 - date.getUTCHours() : 0;
+        let hours = new Date(date - new Date()).getHours();
+        let mins = 60 - date.getUTCMinutes();
+        let secs = 60 - date.getUTCSeconds();
 
         // reset timer when days are over
         if (days < 0) {
