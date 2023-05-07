@@ -26,7 +26,8 @@
 .pastors__img-8,
 .pastors__img-9,
 .pastors__img-10,
-.pastors__img-11 {
+.pastors__img-11,
+.pastors__img-12 {
   width: 300px;
   height: 400px;
   border-radius: 8px;
@@ -69,6 +70,10 @@
 
 .pastors__img-11 {
   background-image: url("../../assets/images/founders-mummy.png");
+}
+
+.pastors__img-12 {
+  background-image: url("../../assets/images/pastorate10.jpeg");
 }
 
 .pastors-credentials__bio {
