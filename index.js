@@ -102,12 +102,19 @@ function randomFromRange(min, max) {
 
     const countdown = setInterval(() => {
         if (date < today) return;
-        const numOfDays = date > today ? Math.floor((date - today) / oneDay) : '00';
-        let days = numOfDays;
-        // let hours = 23 >= date.getUTCHours() ? 23 - date.getUTCHours() : 0;
-        let hours = new Date(date - new Date()).getHours();
-        let mins = 60 - date.getUTCMinutes();
-        let secs = 60 - date.getUTCSeconds();
+
+        let countDownDate = date.getTime();
+        let now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+        console.log(days, hours, mins, secs);
 
         // reset timer when days are over
         if (days < 0) {
@@ -127,7 +134,7 @@ function randomFromRange(min, max) {
 (async function () {
     const response = await fetch('./json/testimonies.json');
     const testimoniesData = await response.json();
-    testimoniesData.map(({name, message}) => {
+    testimoniesData.map(({ name, message }) => {
         testimoniesContainer.innerHTML += `
             <section class="testimony" id="testimony">
                 <p class="testimony__msg">
