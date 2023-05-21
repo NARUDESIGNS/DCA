@@ -1,0 +1,68 @@
+/* modifier style */
+.darken-text {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.banner {
+  background: url("../assets/images/carousel-slide-6.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--fill-color);
+  height: 350px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+.banner__text {
+  font-size: 3rem;
+}
+
+#sermons {
+  display: flex;
+  flex-direction: column;
+}
+
+#sermons div.sermon{
+  width: 100%;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sermons div.sermon:nth-child(even){
+  background: #efefef;
+}
+
+#sermons div.sermon audio{
+  width: 90%;
+}
+
+#sermons div.sermon p.title{
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--fill-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+#sermons div.sermon div.sermon-row{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#sermons div.sermon div.sermon-row p.preacher{
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 450px) {
+  .banner {
+    height: 350px;
+  }
+}
