@@ -114,7 +114,6 @@ function randomFromRange(min, max) {
         var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var secs = Math.floor((distance % (1000 * 60)) / 1000);
 
-        console.log(days, hours, mins, secs);
 
         // reset timer when days are over
         if (days < 0) {
@@ -143,6 +142,5 @@ function randomFromRange(min, max) {
                 <p class="testimony__name"> — ${name}</p>
             </section>
         `;
-        console.log(name);
     });
 })();
