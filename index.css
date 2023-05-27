@@ -764,10 +764,14 @@ a.bus-service {
     box-shadow: unset;
     font-size: 0.75rem;
     padding: 0;
-    /* width: 150px; */
     width: 100%;
     color: white;
   }
+
+  .about:hover .dropdown {
+    position: static;
+  }
+
   .dropdown__items:hover {
     color: white;
     background: none;
