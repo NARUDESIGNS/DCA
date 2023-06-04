@@ -242,8 +242,8 @@ a {
   color: white;
   font-weight: 700;
   font-size: 50px;
-  margin-left: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  margin-left: calc(var(--spacing-lg) / 1.5);
+  margin-bottom: 0;
 }
 
 .slide-indicators {
@@ -607,7 +607,7 @@ a.bus-service {
   border-radius: 50%;
   border: transparent 5px solid;
   border-top-color: var(--fill-color);
-  animation: spin .5s infinite;
+  animation: spin 0.5s infinite;
 }
 
 @keyframes spin {
@@ -617,7 +617,7 @@ a.bus-service {
   90% {
     transform: rotate(315deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -757,7 +757,7 @@ a.bus-service {
     color: var(--secondary-text-color);
   }
 
-  .nav-items__item--active .dropdown a li{
+  .nav-items__item--active .dropdown a li {
     color: var(--fill-color);
   }
 
@@ -839,7 +839,7 @@ a.bus-service {
   .carousel-slide__text {
     line-height: 1.2;
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom: calc(var(--spacing-lg) / 2.5);
   }
   .upcoming-event {
     width: 100%;
