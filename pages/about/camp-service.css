@@ -36,3 +36,10 @@
 .camp-service__desc a{
     text-decoration: underline;
 }
+
+marquee img{
+  width: min(350px, 90%);
+  height: 350px;
+  margin: 20px;
+  margin-top: 0;
+}
