@@ -757,6 +757,10 @@ a.bus-service {
     color: var(--secondary-text-color);
   }
 
+  .nav-items__item--active .dropdown a li{
+    color: var(--fill-color);
+  }
+
   .about .dropdown {
     left: 0;
     top: 55px;
