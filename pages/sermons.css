@@ -34,7 +34,7 @@ div.search-wrapper{
   margin-bottom: 10px;
 }
 
-div.search-wrapper input[type='search']{
+div.search-wrapper input[type='text']{
   border: none;
   outline: none;
   background: transparent;

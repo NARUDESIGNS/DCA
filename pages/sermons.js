@@ -1,6 +1,8 @@
 const sermons = document.getElementById('sermons');
 const search = document.getElementById('search');
 
+let searchThrottle;
+
 let allSermonsJSON = []
 
 async function getSermons() {
@@ -8,6 +10,13 @@ async function getSermons() {
     const response = await request.json();
     allSermonsJSON = response.data;
     filterSermons();
+}
+
+function filterSermonsHandler() {
+    clearTimeout(searchThrottle);
+    searchThrottle = setTimeout(() => {
+        filterSermons();
+    }, 500);
 }
 
 function filterSermons() {
