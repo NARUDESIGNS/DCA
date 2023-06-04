@@ -327,14 +327,14 @@ a {
   width: 100%;
   max-width: 700px;
   height: 500px;
-  background-image: url("./assets/images/founders.jpeg?v=10");
+  background-image: url("./assets/images/founders.jpeg?v=7");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   border-radius: 8px;
 }
 .resident-pastor-img {
-  background-image: url("./assets/images/resident-pastor.jpeg?v=10");
+  background-image: url("./assets/images/resident-pastor.jpeg?v=7");
 }
 .founders-details {
   margin-bottom: var(--spacing-lg);
