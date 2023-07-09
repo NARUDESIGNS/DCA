@@ -1,10 +1,30 @@
 [
     {
-        "name": "Kingdom Life Convention",
-        "date": "2023-04-07"
+        "name": "Sunday Service",
+        "date": "2023-07-09 13:00:00"
+    },
+    {
+        "name": "Midweek Service",
+        "date": "2023-07-12 18:00:00"
     },
     {
         "name": "Sunday Service",
-        "date": "2023-04-09"
+        "date": "2023-07-16 13:00:00"
+    },
+    {
+        "name": "Midweek Service",
+        "date": "2023-07-19 18:00:00"
+    },
+    {
+        "name": "Sunday Service",
+        "date": "2023-07-23 13:00:00"
+    },
+    {
+        "name": "Midweek Service",
+        "date": "2023-07-26 18:00:00"
+    },
+    {
+        "name": "Sunday Service",
+        "date": "2023-07-30 13:00:00"
     }
 ]

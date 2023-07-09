@@ -81,37 +81,9 @@ function randomFromRange(min, max) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Get upcoming events data
 (async function () {
-    const response = await fetch('./json/upcomingEvent.json');
+    const response = await fetch('./json/upcomingEvent.json?v=6');
     const upcomingEvent = await response.json();
 
     // COUNTDOWN 
