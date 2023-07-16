@@ -60,6 +60,25 @@
   width: 45px;
   height: 45px;
 }
+
+.bank-header__col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0;
+  justify-content: center;
+}
+
+.bank-header__title {
+  line-height: 1.17rem;
+}
+
+.bank-header__currency {
+  line-height: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .bank-details__account-name {
   margin-bottom: 15px;
 }
