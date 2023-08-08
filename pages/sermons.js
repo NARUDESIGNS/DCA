@@ -26,7 +26,7 @@ function filterSermons() {
             let sermonDate = new Date(sermon.date);
             let sermonDiv = `
             <div class='sermon'>
-                <audio controls>
+                <audio controls preload="none">
                 <source src='${sermon.sermon}'>
                 </audio>
                 <p class='title'>${sermon.title}</p>
