@@ -29,20 +29,20 @@ function hide(element) {
 // @link https://support.google.com/youtube/answer/171780?hl=en
 const ytSermons = [
   "https://www.youtube.com/embed/o_xpooNyPQ0",
-  // "https://www.youtube.com/embed/vssWH31MLb4"
-  // "https://www.youtube.com/embed/ILGSLAUfarQ",
-  // "https://www.youtube.com/embed/dRNLueXtxHI",
-  // "https://www.youtube.com/embed/9S8FD6jNkyw",
-  // "https://www.youtube.com/embed/RjnOU9z6flY",
-  // "https://www.youtube.com/embed/Sb1K5il-U-c",
-  // "https://www.youtube.com/embed/5ZWnu9UaUMY",
-  // "https://www.youtube.com/embed/HioujsHsdM8",
+  "https://www.youtube.com/embed/vssWH31MLb4",
+  "https://www.youtube.com/embed/ILGSLAUfarQ",
+  "https://www.youtube.com/embed/dRNLueXtxHI",
+  "https://www.youtube.com/embed/9S8FD6jNkyw",
+  "https://www.youtube.com/embed/RjnOU9z6flY",
+  "https://www.youtube.com/embed/Sb1K5il-U-c",
+  "https://www.youtube.com/embed/5ZWnu9UaUMY",
+  "https://www.youtube.com/embed/HioujsHsdM8",
 
 ];
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
-popupSermon.src = randomSermon;
+popupSermon.src = "https://www.youtube.com/embed/o_xpooNyPQ0";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -83,7 +83,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=172");
+  const response = await fetch("./json/upcomingEvent.json?v=19");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
