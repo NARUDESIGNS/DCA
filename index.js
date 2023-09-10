@@ -54,7 +54,7 @@ const popupSermonTimer = setTimeout(() => {
   show(dimBackground);
   show(popupSermonContainer);
   clearTimeout(popupSermonTimer);
-}, 5500);
+}, 9500);
 
 // close popup menu
 closePopupSermonBtn.addEventListener("click", () => {
@@ -83,7 +83,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=422");
+  const response = await fetch("./json/upcomingEvent.json?v=919");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN

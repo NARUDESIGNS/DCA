@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css?v=919">
-    <link rel="stylesheet" href="./sermons.css?v=919">
+    <link rel="stylesheet" href="./family-games.css?v=919">
     <link rel="shortcut icon" href="../assets/icons/Logo.png?v=919" type="image/x-icon">
-    <title>DCA | Sermons</title>
+    <title>DCA | Family Games</title>
 </head>
 
 <body>
@@ -25,14 +25,14 @@
 
             <ul class="nav-items slide-out" id="side-menu">
                 <li class="nav-items__item"><a href="../index.html">Home</a></li>
-                <li class="nav-items__item nav-items__item about  nav-items__item--active">
+                <li class="nav-items__item nav-items__item about">
                     Resources
                     <ul class="dropdown">
                         <a href="https://blog.divinechristianassembly.com/">
                             <li class="dropdown__items">Church Blog</li>
                         </a>
-                        <a href="#">
-                            <li class="dropdown__items dropdown__items--active">Sermons</li>
+                        <a href="./sermons.html">
+                            <li class="dropdown__items">Sermons</li>
                         </a>
                     </ul>
                 </li>
@@ -74,14 +74,19 @@
     <div class="main-container">
         <!-- Banner -->
         <div class="banner">
-            <h1 class="banner__text">SERMONS</h1>
+            <h1 class="banner__text">FAMILY GAMES</h1>
         </div>
-        <div class="search-wrapper">
-            <img src="../assets/icons/search.svg" alt="search">
-            <input type="text" id="search" oninput="filterSermonsHandler()" placeholder="Search here">
-        </div>
-        <div id="sermons">
-            <div class="loader"></div>
+        <div class="bus-container">
+            <p>This is the annual family games, held on the last sunday of October, which happens to be our family month
+                in Divine Christian Assembly. During this occasion, we delve into various modern family-related topics
+                and concerns and for this year, the family games serve as the concluding activity for our month-long
+                program, offering cash prizes and a variety of other rewards for both the champions and the runners-up.
+                Star Price is N40,000. and other consolation prices.
+            </p>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSegUN0U9M2ZVV1_86Oiwgpm-50wf-GPMVHEBaglLqsjubySRw/viewform?embedded=true"
+                class="games-form" frameborder="0" marginheight="0" marginwidth="0">Loading…
+            </iframe>
         </div>
     </div>
 
@@ -152,33 +157,27 @@
     </div>
 
     <div class="notices-modal">
-            <button class="close-notices">
-                <img src="/assets/icons/close.svg" alt="">
-            </button>
-            <a class="notice-group" href='https://fanlink.to/fireprayer' target="_blank">
-                <img src="/assets/images/music.png" alt="music" class="notice-icon">
-                <p>Listen to Fire Prayer</p>
-                <img src="/assets/images/next.png" class='proceed' alt="proceed">
-            </a>
-            <a class="notice-group" href='https://divinevoices.fanlink.to/HallelujahD' target="_blank">
-                <img src="/assets/images/music.png" alt="music" class="notice-icon">
-                <p>Listen to Hallelujah</p>
-                <img src="/assets/images/next.png" class='proceed' alt="proceed">
-            </a>
-            <a class="notice-group" href='/pages/family-games.html'>
-                <img src="/assets/images/family.png" alt="family" class="notice-icon">
-                <p>Register for Family Games</p>
-                <img src="/assets/images/next.png" class='proceed' alt="proceed">
-            </a>
-            <a class="notice-group" href='/pages/bus-service.html'>
-                <img src="/assets/images/bus.png" alt="bus" class="notice-icon">
-                <p>Join our Bus Service</p>
-                <img src="/assets/images/next.png" class='proceed' alt="proceed">
-            </a>
-        </div>
+        <button class="close-notices">
+            <img src="/assets/icons/close.svg" alt="">
+        </button>
+        <a class="notice-group" href='https://fanlink.to/fireprayer' target="_blank">
+            <img src="/assets/images/music.png" alt="music" class="notice-icon">
+            <p>Listen to Fire Prayer</p>
+            <img src="/assets/images/next.png" class='proceed' alt="proceed">
+        </a>
+        <a class="notice-group" href='https://divinevoices.fanlink.to/HallelujahD' target="_blank">
+            <img src="/assets/images/music.png" alt="music" class="notice-icon">
+            <p>Listen to Hallelujah</p>
+            <img src="/assets/images/next.png" class='proceed' alt="proceed">
+        </a>
+        <a class="notice-group" href='/pages/bus-service.html'>
+            <img src="/assets/images/bus.png" alt="bus" class="notice-icon">
+            <p>Join our Bus Service</p>
+            <img src="/assets/images/next.png" class='proceed' alt="proceed">
+        </a>
+    </div>
 
     <script src="../utils/interaction.js?v=919"></script>
-    <script src="sermons.js?v=919"></script>
 </body>
 
 </html>

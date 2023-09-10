@@ -20,6 +20,7 @@
 }
 .banner__text {
   font-size: 3rem;
+  text-shadow: 1px 1px 5px black;
 }
 
 .bank-info {

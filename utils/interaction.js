@@ -2,6 +2,8 @@
 const dimBackground = document.getElementById('dim-background');
 const sideMenu = document.getElementById('side-menu');
 const menuIcon = document.getElementById('menu-icon');
+const noticesButton = document.querySelector('button.close-notices');
+
 
 
 // USABLE FUNCTIONS
@@ -29,3 +31,12 @@ menuIcon.addEventListener('click', () => {
         sideMenuIsOpen = false;
     }
 });
+
+// Hide & Show notices
+noticesButton.addEventListener('click', () => {
+    document.querySelector('div.notices-modal').classList.add('hide-notices')
+    setTimeout(function () {
+        document.querySelector('div.notices-modal').remove()
+    }, 4000);
+});
+

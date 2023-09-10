@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css?v=919">
+    <link rel="shortcut icon" href="./assets/icons/Logo.png?v=919" type="image/x-icon">
+    <title>DCA</title>
+</head>
+
+<body>
+
+    <div class="notices-modal">
+            <button class="close-notices">
+                <img src="/assets/icons/close.svg" alt="">
+            </button>
+            <a class="notice-group" href='https://fanlink.to/fireprayer' target="_blank">
+                <img src="/assets/images/music.png" alt="music" class="notice-icon">
+                <p>Listen to Fire Prayer</p>
+                <img src="/assets/images/next.png" class='proceed' alt="proceed">
+            </a>
+            <a class="notice-group" href='https://divinevoices.fanlink.to/HallelujahD' target="_blank">
+                <img src="/assets/images/music.png" alt="music" class="notice-icon">
+                <p>Listen to Hallelujah</p>
+                <img src="/assets/images/next.png" class='proceed' alt="proceed">
+            </a>
+            <a class="notice-group" href='/pages/family-games.html'>
+                <img src="/assets/images/family.png" alt="family" class="notice-icon">
+                <p>Register for Family Games</p>
+                <img src="/assets/images/next.png" class='proceed' alt="proceed">
+            </a>
+            <a class="notice-group" href='/pages/bus-service.html'>
+                <img src="/assets/images/bus.png" alt="bus" class="notice-icon">
+                <p>Join our Bus Service</p>
+                <img src="/assets/images/next.png" class='proceed' alt="proceed">
+            </a>
+        </div>
+
+
+
+
+    <style>
+        div.notices-modal {
+            position: fixed;
+            background: var(--fill-color);
+            border-radius: 4px;
+            color: white;
+            bottom: -100%;
+            right: 20px;
+            padding: 2px 0;
+            animation: 3s slide-up 3s ease-in forwards, shake 5s 6s infinite;
+        }
+
+        div.notices-modal a.notice-group {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid white;
+            padding: 5px 15px;
+            transition: all 0.3s;
+        }
+
+        div.notices-modal a.notice-group:hover {
+            background: #021c34;
+        }
+
+        div.notices-modal a.notice-group:last-child {
+            border-bottom: none;
+        }
+
+        div.notices-modal a.notice-group img.notice-icon {
+            width: 20px;
+            margin-right: 7px;
+        }
+
+        div.notices-modal a.notice-group img.proceed {
+            width: 20px;
+            height: 20px;
+            margin-left: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        div.notices-modal a.notice-group:hover img.proceed {
+            margin-left: 50px;
+            margin-right: 0;
+        }
+
+        div.notices-modal a.notice-group p{
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        @keyframes slide-up {
+            0% {
+                bottom: -100%;
+            }
+
+            100% {
+                bottom: 20px;
+            }
+        }
+    </style>
+</body>
+
+</html>
