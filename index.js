@@ -92,11 +92,13 @@ function randomFromRange(min, max) {
   // check for next event date by comparing it to today's date.
   // If upcoming date is greater than today, then set upcomind event
   for (let event of upcomingEvent) {
+    console.log(upcomingEvent)
     if (event && new Date(event.date) > today) {
       upcomingEventTitle.innerText = event.name;
       // const [yy, mm, dd] = event.date.split('-');
       // date = new Date(yy, mm - 1, dd);
       date = new Date(event.date);
+      console.log(date)
       break;
     }
   }
