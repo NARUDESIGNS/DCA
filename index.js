@@ -42,7 +42,7 @@ const ytSermons = [
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/d2rnpg3AwYQ";
+popupSermon.src = "https://www.youtube.com/embed/93QDNMiiW_4";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
