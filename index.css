@@ -356,7 +356,7 @@ a {
   width: 100%;
   max-width: 700px;
   height: 500px;
-  background-image: url("./assets/images/founders.jpeg?v=1001");
+  background-image: url("./assets/images/founders.jpeg?v=861");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -364,7 +364,7 @@ a {
 }
 
 .resident-pastor-img {
-  background-image: url("./assets/images/resident-pastor.jpeg?v=1001");
+  background-image: url("./assets/images/resident-pastor.jpeg?v=861");
 }
 
 .founders-details {
