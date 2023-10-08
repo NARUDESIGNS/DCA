@@ -1,6 +1,19 @@
 // basic and general computation will be done here, this is linked to the index.html files
 import "./utils/interaction.js";
 
+const head = document.querySelector('head');
+head.innerHTML += `
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCKMY9T0T"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-TDCKMY9T0T'); 
+</script>
+`;
+
 const dimBackground = document.getElementById("dim-background");
 const closePopupSermonBtn = document.getElementById("close-popup-sermon");
 const popupSermonContainer = document.getElementById("popup-sermon-container");
@@ -42,7 +55,7 @@ const ytSermons = [
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/CAp1PBtL1O8";
+popupSermon.src = "https://www.youtube.com/embed/9QSfdQlaEKQ";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -83,7 +96,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=861");
+  const response = await fetch("./json/upcomingEvent.json?v=172");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
