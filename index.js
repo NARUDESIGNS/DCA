@@ -3,14 +3,14 @@ import "./utils/interaction.js";
 
 const head = document.querySelector('head');
 head.innerHTML += `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCKMY9T0T"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SGFNLCDVYM"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-TDCKMY9T0T'); 
+    gtag('config', 'G-SGFNLCDVYM'); 
 </script>
 `;
 
@@ -33,8 +33,11 @@ const carouselImage = document.getElementById("carousel-slide");
 function show(element, display = "block") {
   element.style.display = display;
 }
-function hide(element) {
+function hide(element, deleteElement) {
   element.style.display = "none";
+  if(deleteElement){
+    element.innerHTML = '';
+  }
 }
 
 // sermons for pop up
@@ -55,7 +58,7 @@ const ytSermons = [
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/9QSfdQlaEKQ";
+popupSermon.src = "https://www.youtube.com/embed/V86okjVrT9s?si=LJTY96VeLJQdxWCj";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -71,7 +74,7 @@ const popupSermonTimer = setTimeout(() => {
 
 // close popup menu
 closePopupSermonBtn.addEventListener("click", () => {
-  hide(popupSermonContainer);
+  hide(popupSermonContainer, true);
   hide(dimBackground);
   document.body.style.overflow = "scroll";
   // return user to position before sermon popped up
@@ -96,7 +99,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=172");
+  const response = await fetch("./json/upcomingEvent.json?v=101");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
