@@ -9,6 +9,8 @@ const bioRole = document.getElementById('bio-role');
 const bioDesc = document.getElementById('bio-desc');
 const closeBio = document.getElementById('close-bio');
 
+const noticesButton = document.querySelector('button.close-notices');
+
 // USABLE FUNCTIONS
 function show(element, display = 'block') {
     element.style.display = display;
@@ -66,4 +68,12 @@ closeBio.addEventListener('click', () => {
         });
     }
 })();
+
+// Hide & Show notices
+noticesButton.addEventListener('click', () => {
+    document.querySelector('div.notices-modal').classList.add('hide-notices')
+    setTimeout(function () {
+        document.querySelector('div.notices-modal').remove()
+    }, 4000);
+});
 

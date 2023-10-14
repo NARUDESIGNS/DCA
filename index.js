@@ -58,7 +58,7 @@ const ytSermons = [
 const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/V86okjVrT9s?si=LJTY96VeLJQdxWCj";
+popupSermon.src = "https://www.youtube.com/embed/5_2sn2v9g3I";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -99,7 +99,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=101");
+  const response = await fetch("./json/upcomingEvent.json?v=62");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
@@ -108,13 +108,11 @@ function randomFromRange(min, max) {
   // check for next event date by comparing it to today's date.
   // If upcoming date is greater than today, then set upcomind event
   for (let event of upcomingEvent) {
-    console.log(upcomingEvent)
     if (event && new Date(event.date) > today) {
       upcomingEventTitle.innerText = event.name;
       // const [yy, mm, dd] = event.date.split('-');
       // date = new Date(yy, mm - 1, dd);
       date = new Date(event.date);
-      console.log(date)
       break;
     }
   }
