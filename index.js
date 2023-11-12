@@ -35,7 +35,7 @@ function show(element, display = "block") {
 }
 function hide(element, deleteElement) {
   element.style.display = "none";
-  if(deleteElement){
+  if (deleteElement) {
     element.innerHTML = '';
   }
 }
@@ -43,19 +43,6 @@ function hide(element, deleteElement) {
 // sermons for pop up
 // NOTE: you have to input embed link, not just link to youtube video
 // @link https://support.google.com/youtube/answer/171780?hl=en
-const ytSermons = [
-  "https://www.youtube.com/embed/o_xpooNyPQ0",
-  "https://www.youtube.com/embed/vssWH31MLb4",
-  "https://www.youtube.com/embed/ILGSLAUfarQ",
-  "https://www.youtube.com/embed/dRNLueXtxHI",
-  "https://www.youtube.com/embed/9S8FD6jNkyw",
-  "https://www.youtube.com/embed/RjnOU9z6flY",
-  "https://www.youtube.com/embed/Sb1K5il-U-c",
-  "https://www.youtube.com/embed/5ZWnu9UaUMY",
-  "https://www.youtube.com/embed/HioujsHsdM8",
-
-];
-const randomSermon = ytSermons[Math.floor(Math.random() * 3)];
 
 // show random sermon
 popupSermon.src = "https://www.youtube.com/embed/5_2sn2v9g3I";
@@ -63,14 +50,31 @@ popupSermon.src = "https://www.youtube.com/embed/5_2sn2v9g3I";
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
 let currentPosition;
-const popupSermonTimer = setTimeout(() => {
-  // document.body.style.overflow = 'hidden';
+const popupSermonTimer = setTimeout(async () => {
+  // const url = new URL('https://cors-anywhere.herokuapp.com/https://youtube.com/@divinechristianassembly/streams');
+  // const response = await fetch(url);
+  // const body = await response.text();
+  // const regexp = /watch\?v=[^,]+/;
+  // const match = body.match(regexp);
+
+  // let link;
+
+  // if (match && match[0]) {
+  //   link = match[0].split('=').pop();
+  //   link = link.substring(0, link.length - 1);
+  //   link = `https://www.youtube.com/embed/${link}`;
+  // } else {
+  //   link = 'https://www.youtube.com/embed/-zQLB9eq9Yc?si=HuuccGsT3neH7aBP';
+  // }
+
+  popupSermon.src = "https://www.youtube.com/embed/5kphJPuozg8?si=Hd0BKtikwz4iRILl";
+
   currentPosition = window.scrollY;
   window.scrollTo(0, 0);
   show(dimBackground);
   show(popupSermonContainer);
   clearTimeout(popupSermonTimer);
-}, 9500);
+}, 8500);
 
 // close popup menu
 closePopupSermonBtn.addEventListener("click", () => {
@@ -99,7 +103,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=62");
+  const response = await fetch("./json/upcomingEvent.json?v=182");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
