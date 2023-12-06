@@ -45,7 +45,7 @@ function hide(element, deleteElement) {
 // @link https://support.google.com/youtube/answer/171780?hl=en
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/5_2sn2v9g3I";
+popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk?si=vNrWIMFjoKCnMscR";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -103,7 +103,7 @@ function randomFromRange(min, max) {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=182");
+  const response = await fetch("./json/upcomingEvent.json?v=119");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
