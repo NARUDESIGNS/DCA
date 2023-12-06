@@ -67,7 +67,7 @@ const popupSermonTimer = setTimeout(async () => {
   //   link = 'https://www.youtube.com/embed/-zQLB9eq9Yc?si=HuuccGsT3neH7aBP';
   // }
 
-  popupSermon.src = "https://www.youtube.com/embed/26Lnlyr-jI8?si=m8wyWBB3xeo1N1dh";
+  popupSermon.src = "https://www.youtube.com/embed/Hu4CR4Mpbsc";
 
   currentPosition = window.scrollY;
   window.scrollTo(0, 0);
