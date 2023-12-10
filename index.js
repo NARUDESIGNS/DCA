@@ -50,23 +50,14 @@ function hide(element, deleteElement) {
 // show sermon after 10s
 let currentPosition;
 const popupSermonTimer = setTimeout(async () => {
-  // const url = new URL('https://cors-anywhere.herokuapp.com/https://youtube.com/@divinechristianassembly/streams');
-  // const response = await fetch(url);
-  // const body = await response.text();
-  // const regexp = /watch\?v=[^,]+/;
-  // const match = body.match(regexp);
 
-  // let link;
-
-  // if (match && match[0]) {
-  //   link = match[0].split('=').pop();
-  //   link = link.substring(0, link.length - 1);
-  //   link = `https://www.youtube.com/embed/${link}`;
-  // } else {
-  //   link = 'https://www.youtube.com/embed/-zQLB9eq9Yc?si=HuuccGsT3neH7aBP';
-  // }
-
-  popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
+  const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
+  const response = await request.json();
+  try {
+    popupSermon.src = response.data.link;
+  } catch (e) {
+    popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
+  }
 
   currentPosition = window.scrollY;
   window.scrollTo(0, 0);
