@@ -45,7 +45,6 @@ function hide(element, deleteElement) {
 // @link https://support.google.com/youtube/answer/171780?hl=en
 
 // show random sermon
-popupSermon.src = "https://www.youtube.com/embed/Hu4CR4Mpbsc";
 
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
@@ -67,7 +66,7 @@ const popupSermonTimer = setTimeout(async () => {
   //   link = 'https://www.youtube.com/embed/-zQLB9eq9Yc?si=HuuccGsT3neH7aBP';
   // }
 
-  popupSermon.src = "https://www.youtube.com/embed/Hu4CR4Mpbsc";
+  popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
 
   currentPosition = window.scrollY;
   window.scrollTo(0, 0);
@@ -101,9 +100,35 @@ function randomFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+
+function getNextDefaultEvent() {
+  // Get the current date
+  const currentDate = new Date();
+
+  // Calculate the number of days until the next Wednesday (3) or Sunday (0)
+  const daysUntilWednesday = (3 - currentDate.getDay() + 7) % 7;
+  const daysUntilSunday = (0 - currentDate.getDay() + 7) % 7;
+
+  // Calculate the dates of the next Wednesday and Sunday
+  const nextWednesday = new Date(currentDate);
+  nextWednesday.setDate(currentDate.getDate() + daysUntilWednesday);
+  nextWednesday.setHours(18);
+
+  const nextSunday = new Date(currentDate);
+  nextSunday.setDate(currentDate.getDate() + daysUntilSunday);
+  nextSunday.setHours(9);
+
+  if (nextWednesday < nextSunday) {
+    return { date: nextWednesday, title: 'Mid Week Service' };
+  }
+
+  return { date: nextSunday, title: 'Sunday Service' };
+}
+
+
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=109");
+  const response = await fetch("./json/upcomingEvent.json?v=09");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
@@ -119,6 +144,12 @@ function randomFromRange(min, max) {
       date = new Date(event.date);
       break;
     }
+  }
+
+  if (!date) {
+    const nextEventDetails = getNextDefaultEvent();
+    upcomingEventTitle.innerText = nextEventDetails.title;
+    date = nextEventDetails.date;
   }
 
   const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
