@@ -119,7 +119,7 @@ function getNextDefaultEvent() {
 
 // Get upcoming events data
 (async function () {
-  const response = await fetch("./json/upcomingEvent.json?v=09");
+  const response = await fetch("./json/upcomingEvent.json");
   const upcomingEvent = await response.json();
 
   // COUNTDOWN
