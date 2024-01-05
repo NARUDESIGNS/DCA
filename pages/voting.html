@@ -79,84 +79,14 @@
         <div class="voting-section">
             <h1 class="header-title">Worker of the Year</h1>
             <div class="workers nominees">
-                <div class="nominee" onclick="selectWorker(0, 'emma')">
-                    <img src="/assets/images/workers/1.png" alt="">
-                    <p>Bro. Emmanuel Oke</p>
-                    <span>Apocalypse (Drama)</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(1, 'bola')">
-                    <img src="/assets/images/workers/2.png" alt="">
-                    <p>Sis. Bola Ejigbo</p>
-                    <span>Children Department</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(2, 'tobi')">
-                    <img src="/assets/images/workers/3.png" alt="">
-                    <p>Bro. Oluwatobi Olusegun</p>
-                    <span>Ushering Department</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(3)">
-                    <img src="/assets/images/workers/4.png" alt="">
-                    <p>Pst. Ogaga Eroubome</p>
-                    <span>Choir Department</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(4)">
-                    <img src="/assets/images/workers/5.png" alt="">
-                    <p>Dcn. Oluwafunmilayo Ojo</p>
-                    <span>Technical & Multimedia</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(5)">
-                    <img src="/assets/images/workers/6.png" alt="">
-                    <p>Bro. Solomon Princewill</p>
-                    <span>Security Department</span>
-                </div>
-                <div class="nominee" onclick="selectWorker(6)">
-                    <img src="/assets/images/workers/7.png" alt="">
-                    <p>Bro. David Aranmonise</p>
-                    <span>Protocol Department</span>
-                </div>
             </div>
         </div>
 
         <div class="voting-section">
             <h1 class="header-title">Department of the Year</h1>
-            <div class=" departments nominees">
-                <div class="nominee" onclick="selectDept(0, 'drama')">
-                    <p>Apocalypse (Drama)</p>
-                </div>
-                <div class="nominee" onclick="selectDept(1, 'cell')">
-                    <p>Cell Fellowship</p>
-                </div>
-                <div class="nominee" onclick="selectDept(2, 'children')">
-                    <p>Children Department</p>
-                </div>
-                <div class="nominee" onclick="selectDept(3, 'choir')">
-                    <p>Choir</p>
-                </div>
-                <div class="nominee" onclick="selectDept(4, 'follow')">
-                    <p>Follow Up</p>
-                </div>
-                <div class="nominee" onclick="selectDept(5, 'lahf')">
-                    <p>Learning at His Feet</p>
-                </div>
-                <div class="nominee" onclick="selectDept(6, 'protocol')">
-                    <p>Protocol</p>
-                </div>
-                <div class="nominee" onclick="selectDept(7, 'sanctuary')">
-                    <p>Sanctuary Keepers</p>
-                </div>
-                <div class="nominee" onclick="selectDept(8, 'security')">
-                    <p>Security</p>
-                </div>
-                <div class="nominee" onclick="selectDept(9, 'tech')">
-                    <p>Technical & Multimedia</p>
-                </div>
-                <div class="nominee" onclick="selectDept(10, 'ushering')">
-                    <p>Ushering</p>
-                </div>
-
+            <div class="departments nominees">
             </div>
         </div>
-
     </div>
 
     <!-- Footer -->
@@ -254,12 +184,58 @@
 
         let selectedDept = '';
 
+        const workerNominees = [
+            {
+                'fullName': 'Bro. Emmanuel Oke',
+                'department': 'Apocalypse (Drama)',
+            },
+            {
+                'fullName': 'Sis. Bola Ejigbo',
+                'department': 'Children Department',
+            },
+            {
+                'fullName': 'Bro. Oluwatobi Olusegun',
+                'department': 'Ushering Department',
+            },
+            {
+                'fullName': 'Pst. Ogaga Eroubome',
+                'department': 'Choir Department',
+            },
+            {
+                'fullName': 'Dcn. Oluwafunmilayo Ojo',
+                'department': 'Technical & Multimedia',
+            },
+            {
+                'fullName': 'Bro. Solomon Princewill',
+                'department': 'Security Department',
+            },
+            {
+                'fullName': 'Bro. David Aranmonise',
+                'department': 'Protocol Department',
+            },
+        ];
+
+        const departments = [
+            'Apocalypse (Drama)',
+            'Cell Fellowship',
+            'Children Department',
+            'Choir',
+            'Follow Up',
+            'Learning at His Feet',
+            'Protocol',
+            'Sanctuary Keepers',
+            'Security',
+            'Technical & Multimedia',
+            'Ushering',
+        ];
+
         function selectWorker(index) {
             const nominees = document.querySelectorAll('.workers .nominee');
             nominees.forEach((nominee) => {
                 nominee.classList.remove('selected');
             });
             nominees[index].classList.add('selected');
+            selectedWorker = workerNominees[index];
         }
 
         function selectDept(index) {
@@ -268,7 +244,37 @@
                 nominee.classList.remove('selected');
             });
             nominees[index].classList.add('selected');
+            selectDept = departments[index];
         }
+
+        function renderWorkers() {
+            const workersDiv = document.querySelector('div.workers');
+            workersDiv.innerHTML = '';
+            workerNominees.forEach((worker, index) => {
+                workersDiv.innerHTML += `
+                <div class="nominee" onclick="selectWorker(${index})">
+                    <img src="/assets/images/workers/${index + 1}.png" alt="">
+                    <p>${worker.fullName}</p>
+                    <span>${worker.department}</span>
+                </div>
+                `;
+            });
+        }
+
+        function renderDepartments() {
+            const departmentsDiv = document.querySelector('div.departments');
+            departmentsDiv.innerHTML = '';
+            departments.forEach((department, index) => {
+                departmentsDiv.innerHTML += `
+                <div class="nominee" onclick="selectDept(${index})">
+                    <p>${department}</p>
+                </div>
+                `;
+            });
+        }
+
+        renderWorkers();
+        renderDepartments();
 
     </script>
 </body>
