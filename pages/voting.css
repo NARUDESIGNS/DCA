@@ -1,0 +1,104 @@
+/* modifier style */
+.darken-text {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.banner {
+  background: url("../assets/images/voting-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--fill-color);
+  height: 300px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+.banner__text {
+  font-size: 3rem;
+  text-shadow: 1.5px 1.5px 10px black;
+  text-align: center;
+}
+
+.voting-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.voting-section h1{
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+
+.nominees{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  max-width: 1095px;
+}
+
+.nominee {
+  background-color: #777;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .35s;
+}
+
+.departments .nominee {
+ width: 285px;
+ height: 80px;
+}
+
+.nominee img{
+  width: 220px;
+  height: 220px;
+  border-radius: 6px;
+}
+
+.nominee p{
+  color: white;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin-top: 0.8rem
+}
+
+.departments .nominee p{
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+}
+
+.nominee span{
+  color: #dadada;
+  text-align: center;
+  font-size: 0.825rem;
+}
+
+.nominee.selected {
+  background-color: #0458A0;
+}
+
+@media only screen and (max-width: 450px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner__text {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css?v=109">
-    <link rel="stylesheet" href="./bus-service.css?v=109">
+    <link rel="stylesheet" href="./voting.css">
     <link rel="shortcut icon" href="../assets/icons/Logo.png?v=109" type="image/x-icon">
-    <title>DCA | Bus Service</title>
+    <title>DCA | January 2024 Voting</title>
 </head>
 
 <body>
@@ -18,14 +18,14 @@
         <nav class="nav">
             <a href="../index.html">
                 <section class="nav__logo">
-                    <img class="nav__logo-img" src="../assets/icons/Logo.png?v=109" alt="logo"/>
+                    <img class="nav__logo-img" src="../assets/icons/Logo.png?v=109" alt="logo" />
                     <p class="nav__logo-text">Divine Christian Assembly</p>
                 </section>
             </a>
 
             <ul class="nav-items slide-out" id="side-menu">
                 <li class="nav-items__item"><a href="../index.html">Home</a></li>
-                <li class="nav-items__item nav-items__item about">
+                <li class="nav-items__item nav-items__item about nav-items__item--active">
                     Resources
                     <ul class="dropdown">
                         <a href="https://blog.divinechristianassembly.com/" target="_blank">
@@ -38,7 +38,6 @@
                 </li>
                 <li class="nav-items__item"><a href="./events.html">Events</a></li>
                 <li class="nav-items__item"><a href="./give.html">Give</a></li>
-                <li class="nav-items__item"><a href="./camp-service.html">Camp Service</a></li>
                 <li class="nav-items__item"><a href="#footer">Contact</a></li>
                 <li class="nav-items__item about">
                     About
@@ -74,16 +73,90 @@
     <div class="main-container">
         <!-- Banner -->
         <div class="banner">
-            <h1 class="banner__text">BUS SERVICE</h1>
+            <h1 class="banner__text">BEST WORKER & DEPARTMENT (2023)</h1>
         </div>
-        <div class="bus-container">
-            <p>This is a bus transportation scheme organised by Divine Christian Assembly to help transport worshippers
-                to our various church branch locations. If you would be interested in this service, please kindly fill
-                out the form.</p>
-            <iframe
-                src="https://docs.google.com/forms/d/1HKtXnZiAz-wm_b6HpCm2SWZHLBLf6IZEcUn8oSztagk/viewform?embedded=true"
-                class="bus-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+        <div class="voting-section">
+            <h1 class="header-title">Worker of the Year</h1>
+            <div class="workers nominees">
+                <div class="nominee" onclick="selectWorker(0, 'emma')">
+                    <img src="/assets/images/workers/1.png" alt="">
+                    <p>Bro. Emmanuel Oke</p>
+                    <span>Apocalypse (Drama)</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(1, 'bola')">
+                    <img src="/assets/images/workers/2.png" alt="">
+                    <p>Sis. Bola Ejigbo</p>
+                    <span>Children Department</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(2, 'tobi')">
+                    <img src="/assets/images/workers/3.png" alt="">
+                    <p>Bro. Oluwatobi Olusegun</p>
+                    <span>Ushering Department</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(3)">
+                    <img src="/assets/images/workers/4.png" alt="">
+                    <p>Pst. Ogaga Eroubome</p>
+                    <span>Choir Department</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(4)">
+                    <img src="/assets/images/workers/5.png" alt="">
+                    <p>Dcn. Oluwafunmilayo Ojo</p>
+                    <span>Technical & Multimedia</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(5)">
+                    <img src="/assets/images/workers/6.png" alt="">
+                    <p>Bro. Solomon Princewill</p>
+                    <span>Security Department</span>
+                </div>
+                <div class="nominee" onclick="selectWorker(6)">
+                    <img src="/assets/images/workers/7.png" alt="">
+                    <p>Bro. David Aranmonise</p>
+                    <span>Protocol Department</span>
+                </div>
+            </div>
         </div>
+
+        <div class="voting-section">
+            <h1 class="header-title">Department of the Year</h1>
+            <div class=" departments nominees">
+                <div class="nominee" onclick="selectDept(0, 'drama')">
+                    <p>Apocalypse (Drama)</p>
+                </div>
+                <div class="nominee" onclick="selectDept(1, 'cell')">
+                    <p>Cell Fellowship</p>
+                </div>
+                <div class="nominee" onclick="selectDept(2, 'children')">
+                    <p>Children Department</p>
+                </div>
+                <div class="nominee" onclick="selectDept(3, 'choir')">
+                    <p>Choir</p>
+                </div>
+                <div class="nominee" onclick="selectDept(4, 'follow')">
+                    <p>Follow Up</p>
+                </div>
+                <div class="nominee" onclick="selectDept(5, 'lahf')">
+                    <p>Learning at His Feet</p>
+                </div>
+                <div class="nominee" onclick="selectDept(6, 'protocol')">
+                    <p>Protocol</p>
+                </div>
+                <div class="nominee" onclick="selectDept(7, 'sanctuary')">
+                    <p>Sanctuary Keepers</p>
+                </div>
+                <div class="nominee" onclick="selectDept(8, 'security')">
+                    <p>Security</p>
+                </div>
+                <div class="nominee" onclick="selectDept(9, 'tech')">
+                    <p>Technical & Multimedia</p>
+                </div>
+                <div class="nominee" onclick="selectDept(10, 'ushering')">
+                    <p>Ushering</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
@@ -152,6 +225,7 @@
         <p class="footer-date">Divine Christian Assembly &copy <span id="footer-date">2023</span></p>
     </div>
 
+
     <div class="notices-modal">
         <button class="close-notices">
             <img src="/assets/icons/close.svg" alt="">
@@ -166,9 +240,37 @@
             <p>Listen to Hallelujah</p>
             <img src="/assets/images/next.png" class='proceed' alt="proceed">
         </a>
+        <a class="notice-group" href='/pages/bus-service.html'>
+            <img src="/assets/images/bus.png" alt="bus" class="notice-icon">
+            <p>Join our Bus Service</p>
+            <img src="/assets/images/next.png" class='proceed' alt="proceed">
+        </a>
     </div>
-
     <script src="../utils/interaction.js?v=109"></script>
+
+    <script>
+
+        let selectedWorker = '';
+
+        let selectedDept = '';
+
+        function selectWorker(index) {
+            const nominees = document.querySelectorAll('.workers .nominee');
+            nominees.forEach((nominee) => {
+                nominee.classList.remove('selected');
+            });
+            nominees[index].classList.add('selected');
+        }
+
+        function selectDept(index) {
+            const nominees = document.querySelectorAll('.departments .nominee');
+            nominees.forEach((nominee) => {
+                nominee.classList.remove('selected');
+            });
+            nominees[index].classList.add('selected');
+        }
+
+    </script>
 </body>
 
 </html>
