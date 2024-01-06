@@ -553,6 +553,10 @@ a {
   letter-spacing: -5px;
 }
 
+h1.word-for-the-year__word.year{
+  text-align: right;
+}
+
 .footer {
   background-color: var(--light-blue-bg);
   padding: var(--spacing-lg);
@@ -1117,6 +1121,10 @@ div.hide-notices button.close-notices {
   .word-for-the-year__word {
     font-size: 2.5rem;
     letter-spacing: normal;
+  }
+
+  h1.word-for-the-year__word.year{
+    text-align: left;
   }
 
   div.notices-modal {
