@@ -660,6 +660,7 @@ div.notices-modal {
   border-radius: 4px;
   color: white;
   bottom: -100%;
+  opacity: 0;
   right: 20px;
   padding: 2px 0;
   animation: slide-up 3s ease-in 2s forwards, 2s shake 6s infinite;
@@ -759,20 +760,28 @@ div.hide-notices button.close-notices {
 @keyframes slide-up {
   0% {
     bottom: -100%;
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
   }
 
   100% {
     bottom: 20px;
+    opacity: 1;
   }
 }
 
 @keyframes slide-down {
   0% {
     bottom: 20px;
+    opacity: 1;
   }
 
   100% {
     bottom: -100%;
+    opacity: 0;
   }
 }
 
