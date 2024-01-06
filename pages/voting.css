@@ -18,25 +18,26 @@
   justify-content: center;
   margin-bottom: var(--spacing-md);
 }
+
 .banner__text {
   font-size: 3rem;
   text-shadow: 1.5px 1.5px 10px black;
   text-align: center;
 }
 
-.voting-section{
+.voting-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-.voting-section h1{
+.voting-section h1 {
   margin-bottom: 45px;
   margin-top: 20px;
 }
 
-.nominees{
+.nominees {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,9 +46,23 @@
   max-width: 1095px;
 }
 
+.departments.selection {
+  margin-top: 25px;
+}
+
+.selection {
+  gap: 0;
+}
+
+.selection h3 {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
 .nominee {
   background-color: #777;
-  padding: 20px;
+  padding: 12px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -58,17 +73,17 @@
 }
 
 .departments .nominee {
- width: 285px;
- height: 80px;
+  width: 285px;
+  height: 80px;
 }
 
-.nominee img{
+.nominee img {
   width: 220px;
   height: 220px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-.nominee p{
+.nominee p {
   color: white;
   text-align: center;
   font-size: 1.125rem;
@@ -76,13 +91,13 @@
   margin-top: 0.8rem
 }
 
-.departments .nominee p{
+.departments .nominee p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.7rem;
 }
 
-.nominee span{
+.nominee span {
   color: #dadada;
   text-align: center;
   font-size: 0.825rem;
@@ -90,6 +105,25 @@
 
 .nominee.selected {
   background-color: #0458A0;
+}
+
+.voting-section button {
+  margin-top: 50px;
+}
+
+button.loading-btn {
+  padding: 6.75px 0;
+  display: none;
+}
+
+button div.loader{
+  margin: 0 auto;
+  padding: 0;
+}
+
+button:hover div.loader{
+  border-color: transparent;
+  border-top-color: white;
 }
 
 @media only screen and (max-width: 450px) {
@@ -102,3 +136,4 @@
     line-height: 3.5rem;
   }
 }
+

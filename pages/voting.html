@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css?v=109">
     <link rel="stylesheet" href="./voting.css">
+    <link rel="stylesheet" href="../utils/snackbar.css">
     <link rel="shortcut icon" href="../assets/icons/Logo.png?v=109" type="image/x-icon">
     <title>DCA | January 2024 Voting</title>
 </head>
@@ -76,16 +77,28 @@
             <h1 class="banner__text">BEST WORKER & DEPARTMENT (2023)</h1>
         </div>
 
-        <div class="voting-section">
+        <div class="ballots voting-section">
             <h1 class="header-title">Worker of the Year</h1>
             <div class="workers nominees">
             </div>
         </div>
 
-        <div class="voting-section">
+        <div class="ballots voting-section">
             <h1 class="header-title">Department of the Year</h1>
             <div class="departments nominees">
             </div>
+        </div>
+
+        <div class="voting-section">
+            <h1 class="header-title">Your selections</h1>
+            <div class="workers nominees selection">
+                <h3>Please select a worker of the year</h3>
+            </div>
+            <div class="departments nominees selection">
+                <h3>Please select a department of the year</h3>
+            </div>
+            <button class="btn" onclick="castVote()">Cast Vote</button>
+            <button class="loading-btn btn"><div class="loader"></div></button>
         </div>
     </div>
 
@@ -176,107 +189,10 @@
             <img src="/assets/images/next.png" class='proceed' alt="proceed">
         </a>
     </div>
+    <div id="snackbar"></div>
+    <script src="../utils/snackbar.js"></script>
+    <script src="./voting.js"></script>
     <script src="../utils/interaction.js?v=109"></script>
-
-    <script>
-
-        let selectedWorker = '';
-
-        let selectedDept = '';
-
-        const workerNominees = [
-            {
-                'fullName': 'Bro. Emmanuel Oke',
-                'department': 'Apocalypse (Drama)',
-            },
-            {
-                'fullName': 'Sis. Bola Ejigbo',
-                'department': 'Children Department',
-            },
-            {
-                'fullName': 'Bro. Oluwatobi Olusegun',
-                'department': 'Ushering Department',
-            },
-            {
-                'fullName': 'Pst. Ogaga Eroubome',
-                'department': 'Choir Department',
-            },
-            {
-                'fullName': 'Dcn. Oluwafunmilayo Ojo',
-                'department': 'Technical & Multimedia',
-            },
-            {
-                'fullName': 'Bro. Solomon Princewill',
-                'department': 'Security Department',
-            },
-            {
-                'fullName': 'Bro. David Aranmonise',
-                'department': 'Protocol Department',
-            },
-        ];
-
-        const departments = [
-            'Apocalypse (Drama)',
-            'Cell Fellowship',
-            'Children Department',
-            'Choir',
-            'Follow Up',
-            'Learning at His Feet',
-            'Protocol',
-            'Sanctuary Keepers',
-            'Security',
-            'Technical & Multimedia',
-            'Ushering',
-        ];
-
-        function selectWorker(index) {
-            const nominees = document.querySelectorAll('.workers .nominee');
-            nominees.forEach((nominee) => {
-                nominee.classList.remove('selected');
-            });
-            nominees[index].classList.add('selected');
-            selectedWorker = workerNominees[index];
-        }
-
-        function selectDept(index) {
-            const nominees = document.querySelectorAll('.departments .nominee');
-            nominees.forEach((nominee) => {
-                nominee.classList.remove('selected');
-            });
-            nominees[index].classList.add('selected');
-            selectDept = departments[index];
-        }
-
-        function renderWorkers() {
-            const workersDiv = document.querySelector('div.workers');
-            workersDiv.innerHTML = '';
-            workerNominees.forEach((worker, index) => {
-                workersDiv.innerHTML += `
-                <div class="nominee" onclick="selectWorker(${index})">
-                    <img src="/assets/images/workers/${index + 1}.png" alt="">
-                    <p>${worker.fullName}</p>
-                    <span>${worker.department}</span>
-                </div>
-                `;
-            });
-        }
-
-        function renderDepartments() {
-            const departmentsDiv = document.querySelector('div.departments');
-            departmentsDiv.innerHTML = '';
-            departments.forEach((department, index) => {
-                departmentsDiv.innerHTML += `
-                <div class="nominee" onclick="selectDept(${index})">
-                    <p>${department}</p>
-                </div>
-                `;
-            });
-        }
-
-        renderWorkers();
-        renderDepartments();
-
-    </script>
 </body>
 
 </html>

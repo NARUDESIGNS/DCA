@@ -77,3 +77,10 @@ noticesButton.addEventListener('click', () => {
     }, 4000);
 });
 
+function setFooterDate() {
+    const now = new Date();
+    document.getElementById('footer-date').innerText = now.getFullYear();
+}
+
+setFooterDate();
+

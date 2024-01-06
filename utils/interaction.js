@@ -4,6 +4,13 @@ const sideMenu = document.getElementById('side-menu');
 const menuIcon = document.getElementById('menu-icon');
 const noticesButton = document.querySelector('button.close-notices');
 
+function setFooterDate() {
+    const now = new Date();
+    document.getElementById('footer-date').innerText = now.getFullYear();
+}
+
+setFooterDate();
+
 // USABLE FUNCTIONS
 function show(element, display = 'block') {
     element.style.display = display;
