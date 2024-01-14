@@ -4,8 +4,12 @@
   margin-right: 10px;
 }
 
+img.love-hormone {
+  width: 100%;
+}
+
 .banner {
-  background: url("../assets/images/family-group.jpeg");
+  background: url("../assets/images/love-hormone.jpg");
   background-repeat: no-repeat;
   background-position-y: 10%;
   background-position-x:center ;
@@ -37,9 +41,9 @@
   padding-left: 16px;
 }
 
-.bus-container iframe.games-form {
+.bus-container iframe.bus-form {
   width: 140%;
-  height: 1780px;
+  height: 1160px;
 }
 
 @media only screen and (max-width: 1100px) {
