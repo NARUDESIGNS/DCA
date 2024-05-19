@@ -57,6 +57,10 @@ a {
   display: none;
 }
 
+.popup-img-container {
+  display: none;
+}
+
 .close-popup-sermon {
   position: absolute;
   top: calc(50% - 280px);
@@ -78,6 +82,7 @@ a {
 }
 
 .popup-sermon {
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,6 +94,41 @@ a {
   height: 80%;
   max-height: 500px;
   z-index: 15;
+  border: 1px solid red;
+}
+
+.close-popup-img {
+  z-index: 20;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  top: -20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgb(25, 13, 49);
+  z-index: 15;
+  cursor: pointer;
+}
+
+#popup-img-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: min(85%, 750px);
+  z-index: 17;
+}
+
+.popup-img {
+  width: 100%;
 }
 
 .dropdown {
@@ -553,7 +593,7 @@ a {
   letter-spacing: -5px;
 }
 
-h1.word-for-the-year__word.year{
+h1.word-for-the-year__word.year {
   text-align: right;
 }
 
@@ -1123,7 +1163,7 @@ div.hide-notices button.close-notices {
     letter-spacing: normal;
   }
 
-  h1.word-for-the-year__word.year{
+  h1.word-for-the-year__word.year {
     text-align: left;
   }
 

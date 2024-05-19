@@ -19,6 +19,10 @@ const closePopupSermonBtn = document.getElementById("close-popup-sermon");
 const popupSermonContainer = document.getElementById("popup-sermon-container");
 const popupSermon = document.getElementById("popup-sermon");
 
+const closePopupImgBtn = document.getElementById("close-popup-img");
+const popupImgContainer = document.getElementById("popup-img-container");
+const popupImg = document.getElementById("popup-img");
+
 const countdownDays = document.getElementById("countdown-days");
 const countdownHours = document.getElementById("countdown-hours");
 const countdownMins = document.getElementById("countdown-mins");
@@ -64,7 +68,15 @@ const popupSermonTimer = setTimeout(async () => {
   show(dimBackground);
   show(popupSermonContainer);
   clearTimeout(popupSermonTimer);
-}, 8500);
+}, 17500);
+
+const popupImgTimer = setTimeout(async () => {
+  currentPosition = window.scrollY;
+  window.scrollTo(0, 0);
+  show(dimBackground);
+  show(popupImgContainer);
+  clearTimeout(popupImgTimer);
+}, 6500);
 
 // close popup menu
 closePopupSermonBtn.addEventListener("click", () => {
@@ -74,6 +86,17 @@ closePopupSermonBtn.addEventListener("click", () => {
   // return user to position before sermon popped up
   window.scrollTo(0, currentPosition);
 });
+
+
+// close popup img
+closePopupImgBtn.addEventListener("click", () => {
+  hide(popupImgContainer, true);
+  hide(dimBackground);
+  document.body.style.overflow = "scroll";
+  // return user to position before sermon popped up
+  window.scrollTo(0, currentPosition);
+});
+
 
 // hide popup when dim background is clicked
 dimBackground.addEventListener("click", () => {
