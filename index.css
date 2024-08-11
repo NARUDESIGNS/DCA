@@ -290,9 +290,9 @@ a {
 #carousel-slide {
   height: 100%;
   width: 100%;
-  background-image: url("./assets/images/carousel-slide-1.jpeg");
+  background-image: url("./assets/images/carousel/new-carousel-images-12.jpg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center 20%;
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -402,7 +402,8 @@ a {
 }
 
 .resident-pastor-img {
-  background-image: url("./assets/images/resident-pastor.jpeg");
+  background-image: url("./assets/images/pastors-min.jpg");
+  background-position: center 5%;
 }
 
 .founders-details {
@@ -478,7 +479,7 @@ a {
 }
 
 .pastors__img-2 {
-  background-image: url("./assets/images/pastorate2.jpeg");
+  background-image: url("./assets/images/pastorate10.jpeg");
 }
 
 .pastors__img-3 {
