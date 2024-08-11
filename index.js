@@ -68,15 +68,15 @@ const popupSermonTimer = setTimeout(async () => {
   show(dimBackground);
   show(popupSermonContainer);
   clearTimeout(popupSermonTimer);
-}, 17500);
+}, 500);
 
-const popupImgTimer = setTimeout(async () => {
-  currentPosition = window.scrollY;
-  window.scrollTo(0, 0);
-  show(dimBackground);
-  show(popupImgContainer);
-  clearTimeout(popupImgTimer);
-}, 6500);
+// const popupImgTimer = setTimeout(async () => {
+//   currentPosition = window.scrollY;
+//   window.scrollTo(0, 0);
+//   show(dimBackground);
+//   show(popupImgContainer);
+//   clearTimeout(popupImgTimer);
+// }, 6500);
 
 // close popup menu
 closePopupSermonBtn.addEventListener("click", () => {

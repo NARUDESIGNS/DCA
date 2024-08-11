@@ -19,6 +19,16 @@ function filterSermonsHandler() {
     }, 500);
 }
 
+function extractId(str) {
+    const regex = /id=([^&]+)/;
+    const match = str.match(regex);
+    return match && match[1];
+}
+
+function generateAudioLink(str){
+    return "https://drive.lienuc.com/uc?id=" + str;
+}
+
 function filterSermons() {
     let allSermons = '';
     for (const sermon of allSermonsJSON) {
@@ -26,8 +36,8 @@ function filterSermons() {
             let sermonDate = new Date(sermon.date);
             let sermonDiv = `
             <div class='sermon'>
-                <audio controls preload="none">
-                <source src='${sermon.sermon}'>
+                <audio crossorigin="anonymous" controls preload="none">
+                    <source src='${generateAudioLink(extractId(sermon.sermon))}'>
                 </audio>
                 <p class='title'>${sermon.title}</p>
                 <div class='sermon-row'>
