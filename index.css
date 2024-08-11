@@ -1121,7 +1121,8 @@ div.hide-notices button.close-notices {
 
   .carousel-slide__text {
     line-height: 1.2;
-    font-size: 30px;
+    font-size: 22px;
+    transform: translateY(-20px);
   }
 
   .header-title {
