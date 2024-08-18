@@ -37,7 +37,7 @@ function filterSermons() {
             let sermonDiv = `
             <div class='sermon'>
                 <audio crossorigin="anonymous" controls preload="none">
-                    <source src='${generateAudioLink(extractId(sermon.sermon))}'>
+                    <source src='${sermon.sermon}'>
                 </audio>
                 <p class='title'>${sermon.title}</p>
                 <div class='sermon-row'>
