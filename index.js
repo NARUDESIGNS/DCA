@@ -105,13 +105,12 @@ dimBackground.addEventListener("click", () => {
 
 setInterval(() => {
   carouselImage.style.backgroundImage = `url(./assets/images/carousel/new-carousel-images-${randomFromRange(
-    1,
-    20
+    [58,57,56,21,22,28,32,26,34,36,30,41,42,43,51,53,49,50]
   )}.jpg)`;
 }, 5500);
 
-function randomFromRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+function randomFromRange(available) {
+  return available[Math.floor(Math.random() * available.length)];
 }
 
 
