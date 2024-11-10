@@ -130,7 +130,10 @@
     background-color: #0458A0;
     color: white;
     margin-bottom: var(--spacing-lg);
-}
+    background-image: url('../../assets/images/bg-pattern.png');
+    background-size: 7%;
+  }
+
 .anthems {
     display: flex;
     justify-content: space-between;

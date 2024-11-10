@@ -68,7 +68,7 @@ const popupSermonTimer = setTimeout(async () => {
   show(dimBackground);
   show(popupSermonContainer);
   clearTimeout(popupSermonTimer);
-}, 500);
+}, 8500);
 
 // const popupImgTimer = setTimeout(async () => {
 //   currentPosition = window.scrollY;
