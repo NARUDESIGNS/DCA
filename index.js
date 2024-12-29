@@ -109,6 +109,14 @@ setInterval(() => {
   )}.jpg)`;
 }, 5500);
 
+const pastorsImage = document.querySelector('.resident-pastor-img')
+
+setInterval(() => {
+  pastorsImage.style.backgroundImage = `url(./assets/images/pastors${randomFromRange(
+    [1,2,3,4]
+  )}.jpeg)`;
+}, 3500);
+
 function randomFromRange(available) {
   return available[Math.floor(Math.random() * available.length)];
 }
