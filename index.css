@@ -585,12 +585,18 @@ a {
 }
 
 .word-for-the-year__sub-word {
-  font-size: 2rem;
+  font-size: 3.25rem;
   font-weight: 800;
   letter-spacing: -1px;
 }
 
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+
 .word-for-the-year__word {
+  text-align: right;
   font-size: 8rem;
   font-weight: 800;
   letter-spacing: -5px;
@@ -598,6 +604,7 @@ a {
 
 h1.word-for-the-year__word.year {
   text-align: right;
+  display: none;
 }
 
 .footer {
@@ -1151,6 +1158,28 @@ div.hide-notices button.close-notices {
   .countdown {
     transform: scale(0.7);
   }
+
+  .word-for-the-year__sub-word, 
+  .word-for-the-year__word, 
+  h1.word-for-the-year__word.year {
+    text-align: center;
+    display: block;
+  }
+
+  .word-for-the-year__sub-word,
+  h1.word-for-the-year__word.year {
+    font-size: 2.5rem;
+    letter-spacing: normal;
+  }
+
+  .word-for-the-year__word{
+    text-align: 3rem
+  }
+
+  .word-for-the-year__sub-word.year{
+    display: none;
+  }
+  
 }
 
 @media only screen and (max-width: 400px) {
@@ -1169,10 +1198,6 @@ div.hide-notices button.close-notices {
   .word-for-the-year__word {
     font-size: 2.5rem;
     letter-spacing: normal;
-  }
-
-  h1.word-for-the-year__word.year {
-    text-align: left;
   }
 
   div.notices-modal {
