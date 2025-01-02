@@ -478,7 +478,7 @@ a {
 }
 
 .pastors__img-1 {
-  background-image: url("./assets/images/pastorate8.jpeg");
+  background-image: url("./assets/images/pastorate8.jpeg?v=1");
 }
 
 .pastors__img-2 {
@@ -486,7 +486,7 @@ a {
 }
 
 .pastors__img-3 {
-  background-image: url("./assets/images/pastorate3.jpeg");
+  background-image: url("./assets/images/pastorate3.jpeg?v=1");
 }
 
 .pastors-credentials {
