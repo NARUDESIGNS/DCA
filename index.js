@@ -104,10 +104,10 @@ dimBackground.addEventListener("click", () => {
 });
 
 setInterval(() => {
-  carouselImage.style.backgroundImage = `url(./assets/images/carousel/new-carousel-images-${randomFromRange(
-    [58,57,56,21,22,28,32,26,34,36,30,41,42,43,51,53,49,50]
-  )}.jpg)`;
-}, 5500);
+  carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/image_${randomFromRange(
+    [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54]
+  )}.jpeg)`;
+}, 3500);
 
 const pastorsImage = document.querySelector('.resident-pastor-img')
 

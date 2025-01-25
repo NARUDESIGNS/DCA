@@ -293,9 +293,9 @@ a {
 #carousel-slide {
   height: 100%;
   width: 100%;
-  background-image: url("./assets/images/carousel/new-carousel-images-21.jpg");
+  background-image: url("./assets/images/new-carousel/image_40.jpeg");
   background-repeat: no-repeat;
-  background-position: center 20%;
+  background-position: center 28%;
   background-size: cover;
   display: flex;
   align-items: flex-end;
