@@ -33,6 +33,40 @@ const testimoniesContainer = document.getElementById("testimony-container");
 
 const carouselImage = document.getElementById("carousel-slide");
 
+
+const bannerImage = document.getElementById('banner-wrapper');
+const closeBannerImage = document.getElementById('close-banner-wrapper');
+
+const body = document.querySelector('body');
+
+setTimeout(function () {
+  body.style.overflow = 'hidden';
+  bannerImage.style.animation = '1.75s scroll-down forwards linear';
+}, 3200);
+
+closeBannerImage.addEventListener('click', function () {
+  bannerImage.style.animation = '1.75s scroll-up forwards linear';
+  body.style.overflow = 'scroll';
+
+  popupSermonTimer = setTimeout(async () => {
+
+    const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
+    const response = await request.json();
+    try {
+      popupSermon.src = response.data.link;
+    } catch (e) {
+      popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
+    }
+
+    currentPosition = window.scrollY;
+    window.scrollTo(0, 0);
+    show(dimBackground);
+    show(popupSermonContainer);
+    clearTimeout(popupSermonTimer);
+  }, 5500);
+});
+
+
 // USABLE FUNCTIONS
 function show(element, display = "block") {
   element.style.display = display;
@@ -53,22 +87,7 @@ function hide(element, deleteElement) {
 // TODO: use session storage to note when popup has been shown and prevent it from showing up again for the session
 // show sermon after 10s
 let currentPosition;
-const popupSermonTimer = setTimeout(async () => {
-
-  const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
-  const response = await request.json();
-  try {
-    popupSermon.src = response.data.link;
-  } catch (e) {
-    popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
-  }
-
-  currentPosition = window.scrollY;
-  window.scrollTo(0, 0);
-  show(dimBackground);
-  show(popupSermonContainer);
-  clearTimeout(popupSermonTimer);
-}, 8500);
+let popupSermonTimer = null;
 
 // const popupImgTimer = setTimeout(async () => {
 //   currentPosition = window.scrollY;
@@ -103,17 +122,24 @@ dimBackground.addEventListener("click", () => {
   closePopupSermonBtn.click();
 });
 
+let isFrequent = true
+
 setInterval(() => {
-  carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/image_${randomFromRange(
-    [0, 2, 28, 30, 32, 38, 54, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 71, 73, 65, 67, 74, 76, 78, 80, 82, 84, 86, 88, 90]
-  )}.jpeg)`;
+  if (isFrequent) {
+    carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/image_${randomFromRange(
+      [0, 2, 28, 30, 32, 38, 54, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 71, 73, 65, 67, 74, 76, 78, 80, 82, 84, 86, 88, 90]
+    )}.jpeg)`;
+  } else {
+    carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/frequent/frequent_${Math.floor(Math.random() * 14) + 1}.jpeg)`;
+  }
+  isFrequent = !isFrequent;
 }, 3500);
 
 const pastorsImage = document.querySelector('.resident-pastor-img')
 
 setInterval(() => {
   pastorsImage.style.backgroundImage = `url(./assets/images/pastors${randomFromRange(
-    [1,2,3,4]
+    [1, 2, 3, 4]
   )}.jpeg)`;
 }, 3500);
 
