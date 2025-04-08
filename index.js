@@ -1,18 +1,22 @@
 // basic and general computation will be done here, this is linked to the index.html files
 import "./utils/interaction.js";
 
-const head = document.querySelector('head');
-head.innerHTML += `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SGFNLCDVYM"></script>
-<script>
+const scriptTag = document.createElement('script');
+scriptTag.setAttribute('async', '');
+scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id=UA-170173477-1';
+document.head.appendChild(scriptTag);
+
+// Add the config inline script
+const inlineScript = document.createElement('script');
+inlineScript.innerHTML = `
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-SGFNLCDVYM'); 
-</script>
+    gtag('config', 'UA-170173477-1');
 `;
+document.head.appendChild(inlineScript);
 
 const dimBackground = document.getElementById("dim-background");
 const closePopupSermonBtn = document.getElementById("close-popup-sermon");
