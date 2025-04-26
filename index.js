@@ -43,32 +43,32 @@ const closeBannerImage = document.getElementById('close-banner-wrapper');
 
 const body = document.querySelector('body');
 
-setTimeout(function () {
-  body.style.overflow = 'hidden';
-  bannerImage.style.animation = '1.75s scroll-down forwards linear';
-}, 3200);
+// setTimeout(function () {
+//   body.style.overflow = 'hidden';
+//   bannerImage.style.animation = '1.75s scroll-down forwards linear';
+// }, 3200);
 
-closeBannerImage.addEventListener('click', function () {
-  bannerImage.style.animation = '1.75s scroll-up forwards linear';
-  body.style.overflow = 'scroll';
+// closeBannerImage.addEventListener('click', function () {
+//   bannerImage.style.animation = '1.75s scroll-up forwards linear';
+//   body.style.overflow = 'scroll';
 
-  popupSermonTimer = setTimeout(async () => {
+//   popupSermonTimer = setTimeout(async () => {
 
-    const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
-    const response = await request.json();
-    try {
-      popupSermon.src = response.data.link;
-    } catch (e) {
-      popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
-    }
+//     const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
+//     const response = await request.json();
+//     try {
+//       popupSermon.src = response.data.link;
+//     } catch (e) {
+//       popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
+//     }
 
-    currentPosition = window.scrollY;
-    window.scrollTo(0, 0);
-    show(dimBackground);
-    show(popupSermonContainer);
-    clearTimeout(popupSermonTimer);
-  }, 5500);
-});
+//     currentPosition = window.scrollY;
+//     window.scrollTo(0, 0);
+//     show(dimBackground);
+//     show(popupSermonContainer);
+//     clearTimeout(popupSermonTimer);
+//   }, 5500);
+// });
 
 
 // USABLE FUNCTIONS
@@ -92,6 +92,23 @@ function hide(element, deleteElement) {
 // show sermon after 10s
 let currentPosition;
 let popupSermonTimer = null;
+
+popupSermonTimer = setTimeout(async () => {
+
+  const request = await fetch('https://divinechristianassembly.com/api/dca/index.php/users/streamlink');
+  const response = await request.json();
+  try {
+    popupSermon.src = response.data.link;
+  } catch (e) {
+    popupSermon.src = "https://www.youtube.com/embed/FsWE6JiUeYk";
+  }
+
+  currentPosition = window.scrollY;
+  window.scrollTo(0, 0);
+  show(dimBackground);
+  show(popupSermonContainer);
+  clearTimeout(popupSermonTimer);
+}, 6500);
 
 // const popupImgTimer = setTimeout(async () => {
 //   currentPosition = window.scrollY;
