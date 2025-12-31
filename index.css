@@ -9,8 +9,8 @@
 :root {
   /* color variables */
   --primary-text-color: #565656;
-  --secondary-text-color: #0458a0;
-  --fill-color: #0458a0;
+  --secondary-text-color: rgb(43,33,93);
+  --fill-color: rgb(112, 87, 159);
   --light-blue-bg: #e6eef5;
   --light-grey-bg: #f1f1f1;
   --light-background: #ffffff;
@@ -262,7 +262,7 @@ img.banner-img.mobile {
   left: 0;
   top: 0;
   height: 100%;
-  border-bottom: 6px solid var(--fill-color);
+  border-bottom: 6px solid var(--secondary-text-color);
   display: block;
 }
 
@@ -643,13 +643,14 @@ img.banner-img.mobile {
   margin: 0 auto;
   margin-bottom: var(--spacing-lg);
   line-height: 0.9;
-  color: var(--fill-color);
+  color: var(--secondary-text-color);
 }
 
 .word-for-the-year__sub-word {
   font-size: 3.25rem;
   font-weight: 800;
   letter-spacing: -1px;
+  color: var(--fill-color);
 }
 
 .row {
@@ -659,7 +660,7 @@ img.banner-img.mobile {
 
 .word-for-the-year__word {
   text-align: right;
-  font-size: 8rem;
+  font-size: 16rem;
   font-weight: 800;
   letter-spacing: -5px;
 }
@@ -667,6 +668,7 @@ img.banner-img.mobile {
 h1.word-for-the-year__word.year {
   text-align: right;
   display: none;
+  color: var(--fill-color);
 }
 
 .footer {
@@ -1103,7 +1105,7 @@ div.hide-notices button.close-notices {
   }
 
   .word-for-the-year__word {
-    font-size: 5rem;
+    font-size: 10rem;
   }
 }
 
@@ -1172,7 +1174,7 @@ div.hide-notices button.close-notices {
   }
 
   .word-for-the-year__word {
-    font-size: 4rem;
+    font-size: 8rem;
   }
 
   .church-details {
@@ -1267,7 +1269,7 @@ div.hide-notices button.close-notices {
   }
 
   .word-for-the-year__word {
-    font-size: 2.5rem;
+    font-size: 8rem;
     letter-spacing: normal;
   }
 
