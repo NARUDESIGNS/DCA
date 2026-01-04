@@ -148,7 +148,7 @@ let isFrequent = true
 setInterval(() => {
   if (isFrequent) {
     carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/image_${randomFromRange(
-      [0, 2, 28, 30, 32, 38, 54, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 71, 73, 65, 67, 74, 76, 78, 80, 82, 84, 86, 88, 90]
+      [9, 2, 28, 30, 76, 90, 91, 92, 93, 97, 95, 96, 97, 98, 0, 2, 28]
     )}.jpeg)`;
   } else {
     carouselImage.style.backgroundImage = `url(./assets/images/new-carousel/frequent/frequent_${Math.floor(Math.random() * 14) + 1}.jpeg)`;
