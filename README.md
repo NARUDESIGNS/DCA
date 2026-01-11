@@ -1,2 +1,2 @@
 # DCA
-Divine Christian Assembly
+Divine Christian Assembly Global

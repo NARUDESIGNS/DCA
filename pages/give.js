@@ -18,7 +18,7 @@ function give() {
             amount: parseInt(amount) * 100,
             currency: "NGN",
             email: email,
-            label: "Divine Christian Assembly",
+            label: "Divine Christian Assembly Global",
             metadata: {
                 custom_fields: [
                     {
