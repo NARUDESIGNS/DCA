@@ -1,8 +1,9 @@
 <?php
 /**
  * Copy this file to config.php (same folder) on the server and paste your
- * Resend API key below. config.php is gitignored so the key never gets
- * committed or served to the browser.
+ * Resend API key below. config.php is gitignored, so the key is never
+ * committed or served to the browser. This single key powers every PHP
+ * form on the site (data deletion request + invitation request).
  *
  *   cp config.example.php config.php
  *

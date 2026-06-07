@@ -1,4 +1,4 @@
 .history
 
-# Resend API key for the data deletion form — keep out of the repo
-pages/data-removal-request/config.php
+# Resend API key for the site's PHP forms — keep out of the repo
+pages/config.php

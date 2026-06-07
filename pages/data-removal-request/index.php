@@ -10,61 +10,10 @@
  */
 
 // ---- Configuration -------------------------------------------------------
-$configPath = __DIR__ . '/config.php';
-if (file_exists($configPath)) {
-    require $configPath;
-}
+require_once __DIR__ . '/../mailer.php'; // provides $RESEND_API_KEY, $RESEND_FROM, e(), send_via_resend()
 
-$RESEND_API_KEY = getenv('RESEND_API_KEY') ?: (defined('RESEND_API_KEY') ? RESEND_API_KEY : '');
-$RECIPIENT      = 'operationsdac@gmail.com';
-$FROM           = 'Divine Christian Assembly Global <noreply@divinechristianassembly.com>';
-$APP_NAME       = 'Divine Christian Assembly Global';
-
-// ---- Helpers -------------------------------------------------------------
-function e($value) {
-    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-}
-
-/**
- * Send the deletion request through Resend. Returns [bool success, string error].
- */
-function send_via_resend($apiKey, $from, $to, $replyTo, $subject, $html) {
-    $payload = json_encode([
-        'from'     => $from,
-        'to'       => [$to],
-        'reply_to' => $replyTo,
-        'subject'  => $subject,
-        'html'     => $html,
-    ]);
-
-    $ch = curl_init('https://api.resend.com/emails');
-    curl_setopt_array($ch, [
-        CURLOPT_POST           => true,
-        CURLOPT_POSTFIELDS     => $payload,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 20,
-        CURLOPT_HTTPHEADER     => [
-            'Authorization: Bearer ' . $apiKey,
-            'Content-Type: application/json',
-        ],
-    ]);
-
-    $response = curl_exec($ch);
-    $status   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $curlErr  = curl_error($ch);
-    curl_close($ch);
-
-    if ($response === false) {
-        return [false, 'Network error: ' . $curlErr];
-    }
-    if ($status >= 200 && $status < 300) {
-        return [true, ''];
-    }
-
-    $decoded = json_decode($response, true);
-    $message = $decoded['message'] ?? ('Email service returned status ' . $status);
-    return [false, $message];
-}
+$RECIPIENT = 'operationsdca@gmail.com';
+$APP_NAME  = 'Divine Christian Assembly Global';
 
 // ---- Request handling ----------------------------------------------------
 $errors  = [];
@@ -135,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $subject = 'Data Deletion Request — ' . $values['name'];
 
                 [$sent, $sendError] = send_via_resend(
-                    $RESEND_API_KEY, $FROM, $RECIPIENT, $values['email'], $subject, $html
+                    $RESEND_API_KEY, $RESEND_FROM, $RECIPIENT, $values['email'], $subject, $html
                 );
 
                 if ($sent) {
@@ -195,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </ol>
             <p class="drr-steps__alt">
                 Prefer email? You can also send your request directly to
-                <a href="mailto:operationsdac@gmail.com">operationsdac@gmail.com</a>.
+                <a href="mailto:operationsdca@gmail.com">operationsdca@gmail.com</a>.
             </p>
         </section>
 
@@ -314,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <footer class="drr-footer">
             <p>Divine Christian Assembly Global &middot; 33, Community Road, Off LASU-Isheri Road, Obadore, Lagos State, Nigeria</p>
-            <p>Questions? <a href="mailto:operationsdac@gmail.com">operationsdac@gmail.com</a></p>
+            <p>Questions? <a href="mailto:operationsdca@gmail.com">operationsdca@gmail.com</a></p>
         </footer>
     </main>
 </body>

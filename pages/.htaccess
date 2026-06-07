@@ -1,0 +1,7 @@
+# Never serve the Resend secret config, and disable directory listings
+# for /pages and everything under it.
+<FilesMatch "^config\.php$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
